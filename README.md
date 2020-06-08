@@ -63,7 +63,7 @@ https://imgur.com/bbXo8I0
 | CSS and Design  | M | 8 | hrs| TBD |
 | Bug Fixes | H | 16 | hrs| TBD |
 
-| TOTAL               |          |     6 hrs      |     hrs     |     TBD     |
+| TOTAL   |    N/A        |    N/A      |     82 hrs      |     hrs     |     TBD     |
 # erver
 Data architecture:
 User > has_many Articles > has_many Comments
