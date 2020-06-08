@@ -62,8 +62,8 @@ https://imgur.com/bbXo8I0
 | React Component Structure | H | 16 | hrs| TBD |
 | CSS and Design  | M | 8 | hrs| TBD |
 | Bug Fixes | H | 16 | hrs| TBD |
-
 | TOTAL   |    N/A      |     82 hrs      |     hrs     |     TBD     |
+
 # erver
 Data architecture:
 User > has_many Articles > has_many Comments
