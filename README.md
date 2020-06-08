@@ -31,16 +31,32 @@ It will be a webpage that uses React to display a homepage that holds a title, a
 - Having a restful api ready for use on React
 - full authentication on both back end and front end.
 
-# Client
-Wire-frames:
+# Wire-frames:
 https://imgur.com/d12wKVv
 https://imgur.com/OmEDAhe
 https://imgur.com/bbXo8I0
 
-component hierarchy,
-component breakdown, 
-time-frame estimates.
+#### Component Breakdown
 
+> Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
+
+|  Component   |    Type    | state | props | Description                                                      |
+| :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
+|    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
+|  Navigation  | functional |   n   |   n   | _The navigation will provide a link to each of the pages._       |
+|    Article    | functional |   n   |   n   | _The article will show the Title and description of the item with CRUD buttons_ |
+|    comments    | functional |   n   |   n   | _Each article will have it's own comments section with react button_ |
+|    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+
+#### Component Estimates
+
+> Use this section to estimate the time necessary to build out each of the components you've described above.
+
+| Task                | Priority | Estimated Time | Time Invested | Actual Time |
+| ------------------- | :------: | :------------: | :-----------: | :---------: |
+| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
 # Server
 Data architecture:
 User > has_many Articles > has_many Comments
