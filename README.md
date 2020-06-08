@@ -32,13 +32,25 @@ It will be a webpage that uses React to display a homepage that holds a title, a
 - full authentication on both back end and front end.
 
 # Client
-Wire-frames, component hierarchy, component breakdown, and time-frame estimates.
+Wire-frames:
+https://imgur.com/d12wKVv
+https://imgur.com/OmEDAhe
+https://imgur.com/bbXo8I0
+
+component hierarchy,
+component breakdown, 
+time-frame estimates.
 
 # Server
-Data architecture, ERD model, and API endpoint documentation.
+Data architecture:
+User > has_many Articles > has_many Comments
+ERD model, and API endpoint documentation.
 
 # Dependencies
 A full list of all libraries, frameworks, etc.
 
 # Post-MVP
-Your goals for post-MVP, including features that you would like to implement once your MVP is complete.
+Make a working Search Feature
+Make CSS more polished
+add many to many comment section
+
