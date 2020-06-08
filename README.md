@@ -54,10 +54,17 @@ https://imgur.com/bbXo8I0
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
-# Server
+| Add Articles Section |    H     |     5 hrs      |    hrs     |     TBD    |
+| Create CRUD Actions |    H     |     7 hrs      |     hrs     |     TBD     |
+| Create Comments Section |    H     |   5 hrs       |   hrs  |  TBD  |
+| Create Authentication | H | 10 | hrs| TBD |
+| Deployment and Bug Fixes | H | 6 | hrs| TBD |
+| React Component Structure | H | 16 | hrs| TBD |
+| CSS and Design  | M | 8 | hrs| TBD |
+| Bug Fixes | H | 16 | hrs| TBD |
+
+| TOTAL               |          |     6 hrs      |     hrs     |     TBD     |
+# erver
 Data architecture:
 User > has_many Articles > has_many Comments
 ERD model, and API endpoint documentation.
