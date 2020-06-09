@@ -54,7 +54,7 @@ It will be a webpage that uses React to display a homepage that holds a title, a
 https://imgur.com/d12wKVv, https://imgur.com/OmEDAhe, https://imgur.com/bbXo8I0
 <br />
 <img src="./images/WireFrame1.png" width= "300px" > 
-<img src="./images/Wireframe2.png" width= "300px" ><img src="./Wireframe3.png" width= "300px" >
+<img src="./images/Wireframe2.png" width= "300px" > <img src="./images/Wireframe3.png" width= "300px" >
 <br />
 
 #### Component Hierarchy
