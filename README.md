@@ -54,11 +54,7 @@ It will be a webpage that uses React to display a homepage that holds a title, a
 # Wire-frames:
 https://imgur.com/d12wKVv, https://imgur.com/OmEDAhe, https://imgur.com/bbXo8I0
 <br />
-<img src="./WireFrame1.png" width= "300px" >
-
-<img src="./Wireframe2.png" width= "300px" >
-
-<img src="./Wireframe3.png" width= "300px" >
+<img src="./WireFrame1.png" width= "300px" > <img src="./Wireframe2.png" width= "300px" ><img src="./Wireframe3.png" width= "300px" >
 <br />
 
 #### Component Hierarchy
@@ -96,7 +92,7 @@ https://imgur.com/nkYvf6C
 | Bug Fixes | H | 16 | hrs| TBD |
 | TOTAL   |    N/A      |     82 hrs      |     hrs     |     TBD     |
 
-# erver
+# Server (Back-End)
 Data architecture:
 User > has_many Articles > has_many Comments
 ERD model, and API endpoint documentation.
