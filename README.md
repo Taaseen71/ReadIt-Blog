@@ -54,7 +54,8 @@ It will be a webpage that uses React to display a homepage that holds a title, a
 # Wire-frames:
 https://imgur.com/d12wKVv, https://imgur.com/OmEDAhe, https://imgur.com/bbXo8I0
 <br />
-<img src="./WireFrame1.png" width= "300px" > <img src="./Wireframe2.png" width= "300px" ><img src="./Wireframe3.png" width= "300px" >
+<img src="./WireFrame1.png" width= "300px" > 
+<img src="./Wireframe2.png" width= "300px" ><img src="./Wireframe3.png" width= "300px" >
 <br />
 
 #### Component Hierarchy
@@ -63,6 +64,10 @@ https://imgur.com/nkYvf6C
 <br />
 <img src="./Component Hierarchy.png" width="600px">
 <br />
+
+#### ERD Model
+
+<img src="./ERDModel.png" width= "300px" >
 
 #### Component Breakdown
 
