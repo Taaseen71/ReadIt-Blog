@@ -60,7 +60,7 @@ https://imgur.com/bbXo8I0
 #### Component Hierarchy
 https://imgur.com/nkYvf6C
 
-<img src="https://imgur.com/nkYvf6C" width= "30px" >
+<img src="./WireFrame1.png" width= "30px" >
 
 #### Component Breakdown
 
