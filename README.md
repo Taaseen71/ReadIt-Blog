@@ -10,9 +10,8 @@ ReadIt-Blog
   - [Goals](#goals)
   - [Challenges](#challenges)
   - [MVP](#mvp)
-  - [Client (Front End)](#client-front-end)
+  - [Client (Front End)]
     - [Wireframes](#wireframes)
-    - [Component Tree](#component-tree)
     - [Component Hierarchy](#component-hierarchy)
     - [Component Breakdown](#component-breakdown)
     - [Component Estimates](#component-estimates)
@@ -51,7 +50,7 @@ It will be a webpage that uses React to display a homepage that holds a title, a
 - Having a restful api ready for use on React
 - full authentication on both back end and front end.
 
-# Wire-frames:
+# Wireframes:
 https://imgur.com/d12wKVv, https://imgur.com/OmEDAhe, https://imgur.com/bbXo8I0
 <br />
 <img src="./WireFrame1.png" width= "300px" > 
@@ -65,10 +64,7 @@ https://imgur.com/nkYvf6C
 <img src="./Component Hierarchy.png" width="600px">
 <br />
 
-#### ERD Model
-https://imgur.com/eDcLPdT
 
-<img src="./ERDModel.png" width= "800px" >
 
 #### Component Breakdown
 
@@ -101,7 +97,13 @@ https://imgur.com/eDcLPdT
 # Server (Back-End)
 Data architecture:
 User > has_many Articles > has_many Comments
-ERD model, and API endpoint documentation.
+ERD model
+
+#### ERD Model
+https://imgur.com/eDcLPdT
+
+<img src="./ERDModel.png" width= "800px" >
+
 
 # Dependencies
 A full list of all libraries, frameworks, etc.
