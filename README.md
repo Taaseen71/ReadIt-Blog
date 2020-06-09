@@ -52,19 +52,21 @@ It will be a webpage that uses React to display a homepage that holds a title, a
 - full authentication on both back end and front end.
 
 # Wire-frames:
-https://imgur.com/d12wKVv
-<img src="./WireFrame1.png" width= "100px" >
-https://imgur.com/OmEDAhe
-<img src="./Wireframe2.png" width= "100px" >
-https://imgur.com/bbXo8I0
-<img src="./Wireframe3.png" width= "100px" >
+https://imgur.com/d12wKVv, https://imgur.com/OmEDAhe, https://imgur.com/bbXo8I0
+<br />
+<img src="./WireFrame1.png" width= "300px" >
+<br />
+<img src="./Wireframe2.png" width= "300px" >
+<br />
+<img src="./Wireframe3.png" width= "300px" >
 
 
 #### Component Hierarchy
 https://imgur.com/nkYvf6C
 
-
-<img src="./Component Hierarchy.png" width="100px">
+<br />
+<img src="./Component Hierarchy.png" width="300px">
+<br />
 
 #### Component Breakdown
 
