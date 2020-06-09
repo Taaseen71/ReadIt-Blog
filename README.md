@@ -59,7 +59,7 @@ https://imgur.com/bbXo8I0
 
 #### Component Hierarchy
 
-![github-small](https://imgur.com/nkYvf6C)
+<img src="https://imgur.com/nkYvf6C" width= "30px" >
 
 #### Component Breakdown
 
