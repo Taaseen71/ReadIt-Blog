@@ -1,8 +1,28 @@
 # ReadIt-Blog
 A Blog application that holds CRUD operations and Authentications, designed using React as a front-end and Ruby On Rails in the back-end
 
+
 # Title
 ReadIt-Blog
+
+- [Overview](#overview)
+- [Features](#features)
+  - [Goals](#goals)
+  - [Challenges](#challenges)
+  - [MVP](#mvp)
+  - [Client (Front End)](#client-front-end)
+    - [Wireframes](#wireframes)
+    - [Component Tree](#component-tree)
+    - [Component Hierarchy](#component-hierarchy)
+    - [Component Breakdown](#component-breakdown)
+    - [Component Estimates](#component-estimates)
+  - [Server (Back End)](#server-back-end)
+    - [ERD Model](#erd-model)
+- [Post-MVP](#post-mvp)
+- [Code Showcase](#code-showcase)
+- [Code Issues & Resolutions](#code-issues--resolutions)
+
+
 
 
 # Overview
@@ -35,6 +55,11 @@ It will be a webpage that uses React to display a homepage that holds a title, a
 https://imgur.com/d12wKVv
 https://imgur.com/OmEDAhe
 https://imgur.com/bbXo8I0
+
+
+#### Component Hierarchy
+
+![github-small](https://imgur.com/nkYvf6C)
 
 #### Component Breakdown
 
