@@ -53,14 +53,18 @@ It will be a webpage that uses React to display a homepage that holds a title, a
 
 # Wire-frames:
 https://imgur.com/d12wKVv
+<img src="./WireFrame1.png" width= "100px" >
 https://imgur.com/OmEDAhe
+<img src="./Wireframe2.png" width= "100px" >
 https://imgur.com/bbXo8I0
+<img src="./Wireframe3.png" width= "100px" >
 
 
 #### Component Hierarchy
 https://imgur.com/nkYvf6C
 
-<img src="./WireFrame1.png" width= "30px" >
+
+<img src="./Component Hierarchy.png" width="100px">
 
 #### Component Breakdown
 
