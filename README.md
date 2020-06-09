@@ -10,7 +10,7 @@ ReadIt-Blog
   - [Goals](#goals)
   - [Challenges](#challenges)
   - [MVP](#mvp)
-  - [Client (Front End)]
+  - Client (Front End)
     - [Wireframes](#wireframes)
     - [Component Hierarchy](#component-hierarchy)
     - [Component Breakdown](#component-breakdown)
