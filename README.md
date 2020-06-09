@@ -66,8 +66,9 @@ https://imgur.com/nkYvf6C
 <br />
 
 #### ERD Model
+https://imgur.com/eDcLPdT
 
-<img src="./ERDModel.png" width= "300px" >
+<img src="./ERDModel.png" width= "800px" >
 
 #### Component Breakdown
 
