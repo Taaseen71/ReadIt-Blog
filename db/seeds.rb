@@ -32,3 +32,5 @@ User.destroy_all
 
 @comment_2 = Comment.create!(my_comment: "I didn't read it yet", user: @user_1, article: @article_1)
 @comment_1 = Comment.create!(my_comment: "the article sounds amazing", user: @user_1, article: @article_2)
+@comment_3 = Comment.create!(my_comment: "Omg what a nice Article", user: @user_2, article: @article_2)
+@comment_4 = Comment.create!(my_comment: "This is such a terrible article", user: @user_3, article: @article_1)
