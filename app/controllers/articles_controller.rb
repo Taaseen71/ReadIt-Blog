@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all
 
-    render json: @articles
+    render json: @articles, include: {comments: {include: {user: {only:[:id, :username]}}}}
   end
 
   # GET /articles/1
