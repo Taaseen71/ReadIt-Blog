@@ -1,6 +1,11 @@
-import React, { useState, useEffect, Component } from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
-// import { Route, Switch, Link } from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
+import Header from "./components/Header";
+import Nav from "./components/Nav";
+import LogIn from "./components/LogIn";
+import SignUp from "./components/SignUp";
+import Home from "./components/Home";
 
 import './App.css';
 
@@ -30,47 +35,32 @@ class App extends Component {
 
 
 
-
-
-
-
     render() {
-        // let items = this.state.data.map(item =>
-        //     <>
-        //         <h5> <span>{item.id}.</span> {item.title}</h5>
-        //         <p> {item.description}</p>
-        //     </>
-        // )
-
-
+        //!  FIGURE OUT HOW TO SHOW USERS INSIDE THE MAP FUNCTION USING USER ID
         return (
             <div className="App">
-                <h1>Hello</h1>
-                <div>{this.state.data.map(item =>
-                    <>
-                        <h5> <span>{item.id}.</span> {item.title}</h5>
-                        {/* <h6> {this.state.users[0].username}</h6> */}
+                <Header />
+                <Nav />
+                <Route path="/" exact>
+                    <Home
+                        key={this.state.data}
+                        data={this.state.data}
+                        users={this.state.user}
+                    />
+                </Route>
+                <Route exact path="/LogIn">
+                    <LogIn
+                        key={this.state.user}
+                        user={this.state.user}
+                    />
+                </Route>
+                <Route exact path="/SignUp">
+                    <SignUp
+                        key={this.state.user}
+                        user={this.state.user}
+                    />
+                </Route>
 
-                        <p> {item.description}</p>
-                        <h6>Commments:</h6>
-                        <div>
-                            {item.comments.map(parameter => {
-                                return (
-                                    <>
-                                        <p>{parameter.my_comment}</p>
-                                        <p>{parameter.user_id}</p>
-                                        {/* <p>{x[parameter.user_id]}</p> */}
-                                    </>
-                                )
-                            })}
-
-                        </div>
-                    </>
-                )}</div>
-                {/* this also works */}
-                {/* <div>
-                    {items}
-                </div> */}
             </div>
         )
     }
