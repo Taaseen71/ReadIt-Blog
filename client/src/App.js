@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Route, Switch, Link } from 'react-router-dom';
 import Header from "./components/Header";
-import Nav from "./components/Nav";
 import LogIn from "./components/LogIn";
 import SignUp from "./components/SignUp";
 import Home from "./components/Home";
@@ -40,7 +39,6 @@ class App extends Component {
         return (
             <div className="App">
                 <Header />
-                <Nav />
                 <Route path="/" exact>
                     <Home
                         key={this.state.data}

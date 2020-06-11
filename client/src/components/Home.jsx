@@ -22,6 +22,7 @@ export default function Home(props, ) {
                         {/* <h6> {props.users[0].username}</h6> */}
 
                         <p> {item.description}</p>
+                        <p>Article Author:{item.user.username}</p>
                         <h6>Commments:</h6>
                         <div>
                             {item.comments.map(parameter => {

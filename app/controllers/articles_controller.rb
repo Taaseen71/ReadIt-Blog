@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:show, :update, :destroy]
+    before_action :set_article, only: [:show, :update, :destroy]
+    before_action :authorize_request, only: [:create, :update, :destroy]
+    before_action :is_this_mine, only: [:update, :destroy]
 
   # GET /articles
   def index
@@ -9,7 +11,6 @@ class ArticlesController < ApplicationController
 
     render json: @articles, include: {user: {only:[:id, :username]}, comments: {include: {user: {only:[:id, :username]}}}}
     # , include: {comments: {include: {user: {only:[:id, :username]}}}}
-
   end
 
   # GET /articles/1
@@ -20,7 +21,7 @@ class ArticlesController < ApplicationController
   # POST /articles
   def create
     @article = Article.new(article_params)
-
+    @article.user = @current_user
     if @article.save
       render json: @article, status: :created, location: @article
     else
@@ -52,4 +53,11 @@ class ArticlesController < ApplicationController
     def article_params
       params.require(:article).permit(:title, :description, :user_id)
     end
+
+    def is_this_mine
+        if @current_user.id != @article.user_id
+            render json: {error: "Unauthorized"}, status: :unauthorized
+        end
+    end
+
 end
