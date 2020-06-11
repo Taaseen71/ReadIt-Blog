@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   resources :comments
   resources :articles
-#   get '/articles/:id/comments', to: 'comments#index' #trying to show all comments specific to each article. not all of them
-#   get '/articles/:id/comments/:id', to: 'comments#show'
+#   get '/articles/:article_id/comments', to: 'comments#index' #trying to show all comments specific to each article. not all of them
+#   get '/articles/:article_id/comments/:id', to: 'comments#comments_to_article'
 
 
   post '/auth/login', to: 'authentication#login'

@@ -38,6 +38,14 @@ class CommentsController < ApplicationController
     @comment.destroy
   end
 
+#   def comments_to_article
+#     @article = Article.find(params[:article_id])
+#     @comment = Comment.find(params[:id])
+
+#     @article.comments.push(@comment)
+
+#   end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_comment
