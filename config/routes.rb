@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :comments
-  resources :articles
+    resources :articles do
+        resources :comments
+    end
 #   get '/articles/:article_id/comments', to: 'comments#index' #trying to show all comments specific to each article. not all of them
 #   get '/articles/:article_id/comments/:id', to: 'comments#comments_to_article'
 

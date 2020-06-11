@@ -29,6 +29,7 @@ export default function Home(props, ) {
                                     <>
                                         <p>{parameter.my_comment}</p>
                                         <p>{parameter.user_id}</p>
+                                        <p>{parameter.user.username}</p>
                                         {/* <p>{x[parameter.user_id]}</p> */}
                                     </>
                                 )
