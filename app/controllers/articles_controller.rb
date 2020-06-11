@@ -7,9 +7,9 @@ class ArticlesController < ApplicationController
 
     # render json: @articles, include: {{user: {only:[:id, :username]}}, {comments: {include: {user: {only:[:id, :username]}}}}}
 
-    render json: @articles, include: {comments: {include: {user: {only:[:id, :username]}}}}
+    render json: @articles, include: {user: {only:[:id, :username]}, comments: {include: {user: {only:[:id, :username]}}}}
+    # , include: {comments: {include: {user: {only:[:id, :username]}}}}
 
-    # , include: {user: {only:[:id, :username]}}, include: {comments: {include: {user: {only:[:id, :username]}}}}
   end
 
   # GET /articles/1
