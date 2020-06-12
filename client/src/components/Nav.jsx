@@ -18,7 +18,6 @@ export default function Nav(props) {
                     {props.currentUser && (<NavLink to="/articles"> My Articles </NavLink>)}
                     {/*   
                         //? if user is present, show my Articles, or else, don't show
-                        //! myArticles hasn't been rendered YET! render 
                     */}
                 </nav>
 
