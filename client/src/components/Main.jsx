@@ -4,7 +4,7 @@ import Header from "./Header";
 import LogIn from "./LogIn";
 import SignUp from "./SignUp";
 import Home from "./Home";
-import { getAllArticles, createArticle } from '../services/article';
+import { getAllArticles, createArticle, destroyArticle } from '../services/article';
 import Articles from './Articles';
 import CreateArticle from './CreateArticle';
 
@@ -42,6 +42,13 @@ export default class Main extends Component {
         }))
         //! USING PREVSTATE SOMEHOW BREAKS CODE. NEED TO FIND A OUT WHERE THE ISSUE IS. 
         //! Only Await fixes it.but it still doesnt update real time.
+    }
+
+    handleDestoryArticle = (id) => {
+        destroyArticle(id);
+        this.setState(async prevState => ({
+            articles: prevState.articles.filter(article => article.id !== id)
+        }))
     }
 
     /* -------------------------------------------------------------------------- */
@@ -82,6 +89,7 @@ export default class Main extends Component {
                         <Articles
                             articles={this.state.articles}
                             currentUser={this.props.currentUser}
+                            handleDestoryArticle={this.handleDestoryArticle}
                         />
                     )} />
 

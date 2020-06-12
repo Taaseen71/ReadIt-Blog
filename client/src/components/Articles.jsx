@@ -3,13 +3,12 @@ import { Link } from "react-router-dom"
 
 export default function Articles(props) {
 
-
-
     const articles = props.articles;
     const currentUser = props.currentUser
+    const handleDestoryArticle = props.handleDestoryArticle
 
 
-    // console.log(props.currentUser)
+
     return (
         <div>
             <hr />
@@ -35,7 +34,13 @@ export default function Articles(props) {
                                         currentUser && currentUser.id === article.user_id && (
                                             <>
                                                 <button>Edit</button>
-                                                <button>Delete</button>
+                                                <button
+                                                    onClick={() => {
+                                                        handleDestoryArticle(article.id);
+                                                        window.location.reload(false);
+                                                    }}>
+                                                    Delete
+                                                </button>
                                             </>
                                         )
                                     }
