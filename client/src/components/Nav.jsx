@@ -22,6 +22,7 @@ export default function Nav(props) {
                         <>
                             <h6>
                                 Hello {CurrentUsername}
+                                {/* {props.currentUser.username} */}
                             </h6>
                             <button onClick={props.handleLogOut}> LogOut </button>
                         </>

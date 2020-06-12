@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import LogIn from "./components/LogIn";
 import SignUp from "./components/SignUp";
 import Home from "./components/Home";
-import { loginUser, registerUser, removeToken } from "./services/auth"
+import { loginUser, registerUser, removeToken, verifyUser } from "./services/auth"
 
 import './App.css';
 import Main from './components/Main';
@@ -18,6 +18,29 @@ class App extends Component {
         users: [],
         currentUser: null,
     }
+
+    async componentDidMount() {
+
+        console.log("componentdidmount");
+        let data = await axios("http://localhost:3000/articles/");
+        data = data.data
+        this.setState({ data });
+        console.log("Data:", this.state.data);
+
+
+        console.log("componentDidMount2");
+        let users = await axios("http://localhost:3000/users")
+        users = users.data
+        this.setState({ users })
+        console.log("users:", this.state.users[0].username)
+
+        this.handleVerify();
+    }
+
+
+
+
+
 
 
     handleLogInSubmit = async (loginData) => {
@@ -38,20 +61,12 @@ class App extends Component {
         removeToken();
     }
 
-    async componentDidMount() {
-        console.log("componentdidmount");
-        let data = await axios("http://localhost:3000/articles/");
-        data = data.data
-        this.setState({ data });
-        console.log("Data:", this.state.data);
-
-
-        console.log("componentDidMount2");
-        let users = await axios("http://localhost:3000/users")
-        users = users.data
-        this.setState({ users })
-        console.log("users:", this.state.users[0].username)
+    handleVerify = async () => {
+        const currentUser = await verifyUser();
+        this.setState({ currentUser });
+        console.log(currentUser)
     }
+
 
 
 
