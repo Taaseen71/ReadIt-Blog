@@ -38,7 +38,8 @@ export default class Main extends Component {
 
     handleCreateArticle = async (userParams) => {
         const newArticle = await createArticle(userParams);
-        this.setState(async prevState => ({
+
+        this.setState(prevState => ({
             articles: [...prevState.articles, newArticle]
         }))
         //! USING PREVSTATE SOMEHOW BREAKS CODE. NEED TO FIND A OUT WHERE THE ISSUE IS. 
@@ -47,7 +48,7 @@ export default class Main extends Component {
 
     handleDestoryArticle = async (id) => {
         await destroyArticle(id);
-        this.setState(async prevState => ({
+        this.setState(prevState => ({
             articles: prevState.articles.filter(article => article.id !== id)
         }))
     }
@@ -55,7 +56,7 @@ export default class Main extends Component {
     //? EDIT ARTICLE. I HAVE NO IDEA WHAT I"M DOING HERE
     handleEditArticle = async (id, articleData) => {
         const updatedArticle = await updateArticle(id, articleData);
-        this.setState(async prevState => ({
+        this.setState(prevState => ({
             articles: prevState.articles.map(article => article.id === id ? updatedArticle : article)
         }))
     }
@@ -104,7 +105,7 @@ export default class Main extends Component {
                         )} />
                     </div>
 
-                    <Route exact path='/articles/new' render={(props) => (
+                    <Route exact path='/new' render={(props) => (
                         <CreateArticle
                             {...props}
                             handleCreateArticle={this.handleCreateArticle}

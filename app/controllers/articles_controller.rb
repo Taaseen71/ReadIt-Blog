@@ -23,7 +23,8 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     @article.user = @current_user
     if @article.save
-      render json: @article, status: :created, location: @article
+      render json: @article, include: {user:{only: [:id, :username]}, comments: {include: {user: {only:[:id, :username]}}}}, status: :created
+    #   , location: @article
     else
       render json: @article.errors, status: :unprocessable_entity
     end
@@ -32,7 +33,7 @@ class ArticlesController < ApplicationController
   # PATCH/PUT /articles/1
   def update
     if @article.update(article_params)
-      render json: @article
+      render json: @article, include: {user:{only: [:id, :username]}, comments: {include: {user: {only:[:id, :username]}}}}
     else
       render json: @article.errors, status: :unprocessable_entity
     end

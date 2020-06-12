@@ -28,13 +28,13 @@ export default class CreateArticle extends Component {
                         title: "",
                         description: ""
                     })
-                    window.location.reload(false);
-                    //? need to refresh page because page not updating upon creation
+                    // window.location.reload(false);
+                    //? need to refresh page because page not updating upon
                 }}
             >
                 <label htmlFor="title"> Title:<br />
                     <input
-                        id="title:"
+                        id="title"
                         type="text"
                         name="title"
                         value={this.state.title}
@@ -43,7 +43,7 @@ export default class CreateArticle extends Component {
                 <div>
                     <label htmlFor="description"> Description:<br />
                         <textarea
-                            id="description:" cols="30" rows="10"
+                            id="description" cols="30" rows="10"
                             name="description"
                             value={this.state.description}
                             onChange={this.handleChange}>

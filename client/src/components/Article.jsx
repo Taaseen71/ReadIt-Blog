@@ -29,6 +29,7 @@ export default class Article extends Component {
     }
 
     handleChange = (e) => {
+        console.log("changed")
         const { name, value } = e.target
         this.setState({
             [name]: value
@@ -38,8 +39,8 @@ export default class Article extends Component {
 
 
     render() {
-        const { title } = this.state;
-        const { description } = this.state;
+        // const { title } = this.state;
+        // const { description } = this.state;
         return (
             <div>
                 <form onSubmit={(e) => {
@@ -50,17 +51,31 @@ export default class Article extends Component {
                         title: "",
                         description: ""
                     })
-                    window.location.reload(false);
+                    // window.location.reload(false);
                 }}>
                     <hr />
                     <h3>Update Article</h3>
-                    <label htmlFor="title">
+                    <label htmlFor="title"> Title: <br />
                         {/* <input id="id" type="text" value={title} onChange={this.handleChange} /> */}
-                        <textarea name={title} value={title} id="id" cols="60" rows="3" onChange={this.handleChange} />
+                        <textarea
+                            id="title"
+                            name="title"
+                            value={this.state.title}
+                            onChange={this.handleChange}
+                            cols="60"
+                            rows="3"
+                        />
                     </label>
                     <br />
-                    <label htmlFor="description">
-                        <textarea name={description} value={description} id="id" cols="60" rows="20" onChange={this.handleChange} />
+                    <label htmlFor="description"> Description: <br />
+                        <textarea
+                            id="description"
+                            name="description"
+                            value={this.state.description}
+                            onChange={this.handleChange}
+                            cols="60"
+                            rows="20"
+                        />
                     </label>
                     <br />
                     <button>Submit</button>
