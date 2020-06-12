@@ -64,16 +64,16 @@ export default class Main extends Component {
                         <LogIn
                             {...props}
                             handleLogInSubmit={this.props.handleLogInSubmit}
-                            key={this.props.user}
-                            user={this.props.user}
+                        // key={this.props.user}
+                        // user={this.props.user}
                         />
                     )} />
                     <Route exact path="/user/SignUp" render={(props) => (
                         <SignUp
                             {...props}
                             handleSignUpSubmit={this.props.handleSignUpSubmit}
-                            key={this.props.user}
-                            user={this.props.user}
+                        // key={this.props.user}
+                        // user={this.props.user}
                         />
                     )} />
                 </div>

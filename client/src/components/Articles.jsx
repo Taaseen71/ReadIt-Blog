@@ -2,36 +2,58 @@ import React from 'react'
 import { Link } from "react-router-dom"
 
 export default function Articles(props) {
+
+
+
     const articles = props.articles;
+    const currentUser = props.currentUser
+
+
+    // console.log(props.currentUser)
     return (
         <div>
+            <hr />
             <h3>Articles</h3>
-            {props.currentUser &&
+            {currentUser &&
                 <Link to="/articles/new">
                     <button>Create New Article</button>
                 </Link>
             }
             <div>
                 {
-                    articles.map(article => (
-                        <>
-                            <h3 key={article.id}>
-                                Title: {article.title}, By <span key={article.id}>
-                                    UserID: {article.user_id}, User: {article.user.username}
-                                </span>
-                            </h3>
+                    articles.map((article) => (
+                        <React.Fragment key={article.id}>
+                            <>
+                                <h3>
+                                    Title: {article.title}, By <span>
+                                        UserID: {article.user_id}, User: {article.user.username}
+                                    </span>
+                                </h3>
+                                <p>Description: {article.description}</p>
+                                <>
+                                    {
+                                        currentUser && currentUser.id === article.user_id && (
+                                            <>
+                                                <button>Edit</button>
+                                                <button>Delete</button>
+                                            </>
+                                        )
+                                    }
 
-                            <p key={article.id}>Description: {article.description}</p>
+
+                                </>
+                            </>
                             <div>
-                                {article.comments.map(parameter => (
+                                {article.comments.map(comment => (
                                     <>
-                                        <p key={parameter.user_id}><span> User {parameter.user.username}: </span>{parameter.my_comment}</p>
-                                        {/* <p>{x[parameter.user_id]}</p> */}
+                                        <p key={comment.user_id}><span> User {comment.user.username}: </span>{comment.my_comment}</p>
+                                        {/* <p>{x[comment.user_id]}</p> */}
                                     </>
                                 )
                                 )}
                             </div>
-                        </>
+                            <hr />
+                        </React.Fragment>
                     ))
                 }
             </div>
