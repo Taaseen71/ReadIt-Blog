@@ -14,13 +14,13 @@ export default function Articles(props) {
             <hr />
             <h3>Articles</h3>
             {currentUser &&
-                <Link to="/articles/new">
+                <Link to="/new">
                     <button>Create New Article</button>
                 </Link>
             }
             <div>
                 {
-                    articles.map((article) => (
+                    articles.reverse().map((article) => (
                         <React.Fragment key={article.id}>
                             <>
                                 <h3>
@@ -39,7 +39,7 @@ export default function Articles(props) {
                                                 <button
                                                     onClick={() => {
                                                         handleDestoryArticle(article.id);
-                                                        window.location.reload(false);
+                                                        // window.location.reload(false);
                                                     }}>
                                                     Delete
                                                 </button>
@@ -58,6 +58,8 @@ export default function Articles(props) {
                                     </>
                                 )
                                 )}
+
+                                <textarea type="text" placeholder="add a new comment" cols="60" rows="1" />
                             </div>
                             <hr />
                         </React.Fragment>
