@@ -30,7 +30,13 @@ class LogIn extends Component {
                 <div>
                     <form onSubmit={(e) => {
                         e.preventDefault();
-                        this.props.handleLogInSubmit(this.state)
+                        this.props.handleLogInSubmit(this.state);
+                        this.props.history.push('/');
+                        //? Resetting State for this page only since everything is done
+                        this.setState({
+                            username: "",
+                            password: ""
+                        })
                     }}>
                         <label htmlFor="username"> Username:
                         <input

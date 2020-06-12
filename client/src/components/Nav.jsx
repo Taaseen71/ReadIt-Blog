@@ -1,26 +1,42 @@
 import React from 'react';
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
-export default function Nav() {
+export default function Nav(props) {
+    let CurrentUsername;
+    if (props.currentUser) {
+        CurrentUsername = props.currentUser.username.split('')
+        CurrentUsername[0] = CurrentUsername[0].toUpperCase();
+        CurrentUsername = CurrentUsername.join('')
+    }
+
     return (
         <div>
             This is the Nav
-
             <ul>
-                <li>
-                    <Link to="/"> Browse All Articles </Link>
-                </li>
-                <li>
+                <nav>
+                    <NavLink to="/"> Browse All Articles </NavLink>
+                    {props.currentUser && (<NavLink to="/articles"> My Articles </NavLink>)}
+                    {/*   
+                        //? if user is present, show my Articles, or else, don't show
+                        //! myArticles hasn't been rendered YET! render 
+                    */}
+                </nav>
+
+                {props.currentUser
+                    ?
+                    <>
+                        <h6>
+                            Hello {CurrentUsername}
+                            {/* {props.currentUser.username} */}
+                        </h6>
+                        <button onClick={props.handleLogOut}> LogOut </button>
+                    </>
+                    :
                     <Link to="/user/LogIn"> Log In/Register </Link>
-                </li>
-                {/* <li>
-                    <Link to="/user/SignUp"> Sign Up</Link>
-                </li> */}
-                {/* <li>
-                    <Link to="/user/SignUp"> </Link>
-                </li> */}
+                }
 
             </ul>
+
 
         </div>
     )
