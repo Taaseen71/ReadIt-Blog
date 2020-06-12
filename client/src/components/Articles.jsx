@@ -33,7 +33,9 @@ export default function Articles(props) {
                                     {
                                         currentUser && currentUser.id === article.user_id && (
                                             <>
-                                                <button >Edit</button>
+                                                <Link to={`/articles/${article.id}`}>
+                                                    <button >Edit</button>
+                                                </Link>
                                                 <button
                                                     onClick={() => {
                                                         handleDestoryArticle(article.id);

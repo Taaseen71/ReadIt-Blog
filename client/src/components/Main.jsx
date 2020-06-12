@@ -6,6 +6,7 @@ import SignUp from "./SignUp";
 import Home from "./Home";
 import { getAllArticles, createArticle, destroyArticle, updateArticle } from '../services/article';
 import Articles from './Articles';
+import Article from './Article';
 import CreateArticle from './CreateArticle';
 
 
@@ -44,13 +45,20 @@ export default class Main extends Component {
         //! Only Await fixes it.but it still doesnt update real time.
     }
 
-    handleDestoryArticle = (id) => {
-        destroyArticle(id);
+    handleDestoryArticle = async (id) => {
+        await destroyArticle(id);
         this.setState(async prevState => ({
             articles: prevState.articles.filter(article => article.id !== id)
         }))
     }
 
+    //? EDIT ARTICLE. I HAVE NO IDEA WHAT I"M DOING HERE
+    handleEditArticle = async (id, articleData) => {
+        const updatedArticle = await updateArticle(id, articleData);
+        this.setState(async prevState => ({
+            articles: prevState.articles.map(article => article.id === id ? updatedArticle : article)
+        }))
+    }
     /* -------------------------------------------------------------------------- */
     /*                                articles end                                */
     /* -------------------------------------------------------------------------- */
@@ -85,14 +93,16 @@ export default class Main extends Component {
                     )} />
                 </div>
                 <div>
-                    <Route exact path='/' render={(props) => (
-                        <Articles
-                            {...props}
-                            articles={this.state.articles}
-                            currentUser={this.props.currentUser}
-                            handleDestoryArticle={this.handleDestoryArticle}
-                        />
-                    )} />
+                    <div >
+                        <Route exact path='/' render={(props) => (
+                            <Articles
+                                {...props}
+                                articles={this.state.articles}
+                                currentUser={this.props.currentUser}
+                                handleDestoryArticle={this.handleDestoryArticle}
+                            />
+                        )} />
+                    </div>
 
                     <Route exact path='/articles/new' render={(props) => (
                         <CreateArticle
@@ -101,22 +111,25 @@ export default class Main extends Component {
                         />
                     )} />
 
-                    //!! WORK ON THIS> STILL NOT FIXED
-                    <Route exact path='/articles/:id/edit' render={(props) => {
-                        const articleId = this.props.match.params.id;
+                    {/* //??? NO IDEA WHATS GOING ON BELOW */}
+                    {/* //!! WORK ON THIS> STILL NOT FIXED */}
+
+                    <Route exact path={`/articles/:id`} render={(props) => {
+                        const articleId = props.match.params.id;
                         const article = this.state.articles.find(article => article.id === parseInt(articleId));
-                        return <updateArticle
+                        return <Article
                             {...props}
                             article={article}
-                            putArticle={this.putArticle}
+                            handleEditArticle={this.handleEditArticle}
                         />
                     }}
                     />
 
 
+
                 </div>
 
-            </div>
+            </div >
         )
     }
 }
