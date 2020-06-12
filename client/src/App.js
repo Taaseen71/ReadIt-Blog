@@ -14,25 +14,25 @@ import Main from './components/Main';
 
 class App extends Component {
     state = {
-        data: [],
-        users: [],
+        // data: [],
+        // users: [],
         currentUser: null,
     }
 
     async componentDidMount() {
 
-        console.log("componentdidmount");
-        let data = await axios("http://localhost:3000/articles/");
-        data = data.data
-        this.setState({ data });
-        console.log("Data:", this.state.data);
+        // console.log("componentdidmount");
+        // let data = await axios("http://localhost:3000/articles/");
+        // data = data.data
+        // this.setState({ data });
+        // console.log("Data:", this.state.data);
 
 
-        console.log("componentDidMount2");
-        let users = await axios("http://localhost:3000/users")
-        users = users.data
-        this.setState({ users })
-        console.log("users:", this.state.users[0].username)
+        // console.log("componentDidMount2");
+        // let users = await axios("http://localhost:3000/users")
+        // users = users.data
+        // this.setState({ users })
+        // console.log("users:", this.state.users[0].username)
 
         this.handleVerify();
     }

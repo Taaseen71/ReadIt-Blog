@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
 export default function Nav(props) {
     let CurrentUsername;
@@ -13,27 +13,30 @@ export default function Nav(props) {
         <div>
             This is the Nav
             <ul>
-                <li>
-                    <Link to="/"> Browse All Articles </Link>
-                </li>
-                <li>
-                    {props.currentUser
-                        ?
-                        <>
-                            <h6>
-                                Hello {CurrentUsername}
-                                {/* {props.currentUser.username} */}
-                            </h6>
-                            <button onClick={props.handleLogOut}> LogOut </button>
-                        </>
-                        :
-                        <>
-                            <Link to="/user/LogIn"> Log In/Register </Link>
-                        </>
-                    }
-                </li>
+                <nav>
+                    <NavLink to="/"> Browse All Articles </NavLink>
+                    {props.currentUser && (<NavLink to="/articles"> My Articles </NavLink>)}
+                    {/*   
+                        //? if user is present, show my Articles, or else, don't show
+                        //! myArticles hasn't been rendered YET! render 
+                    */}
+                </nav>
+
+                {props.currentUser
+                    ?
+                    <>
+                        <h6>
+                            Hello {CurrentUsername}
+                            {/* {props.currentUser.username} */}
+                        </h6>
+                        <button onClick={props.handleLogOut}> LogOut </button>
+                    </>
+                    :
+                    <Link to="/user/LogIn"> Log In/Register </Link>
+                }
 
             </ul>
+
 
         </div>
     )

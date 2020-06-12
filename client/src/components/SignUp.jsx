@@ -30,7 +30,14 @@ class SignUp extends Component {
                 <div>
                     <form onSubmit={(e) => {
                         e.preventDefault();
-                        this.props.handleSignUpSubmit(this.state)
+                        this.props.handleSignUpSubmit(this.state);
+                        this.props.history.push('/');
+                        //? Resetting State for this page only since everything is done
+                        this.setState({
+                            username: "",
+                            email: "",
+                            password: ""
+                        })
                     }}>
                         <label htmlFor="username"> Username:
                         <input
