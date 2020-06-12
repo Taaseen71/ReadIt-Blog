@@ -4,7 +4,7 @@ import Header from "./Header";
 import LogIn from "./LogIn";
 import SignUp from "./SignUp";
 import Home from "./Home";
-import { getAllArticles, createArticle, destroyArticle } from '../services/article';
+import { getAllArticles, createArticle, destroyArticle, updateArticle } from '../services/article';
 import Articles from './Articles';
 import CreateArticle from './CreateArticle';
 
@@ -85,8 +85,9 @@ export default class Main extends Component {
                     )} />
                 </div>
                 <div>
-                    <Route exact path='/' render={() => (
+                    <Route exact path='/' render={(props) => (
                         <Articles
+                            {...props}
                             articles={this.state.articles}
                             currentUser={this.props.currentUser}
                             handleDestoryArticle={this.handleDestoryArticle}
@@ -99,6 +100,18 @@ export default class Main extends Component {
                             handleCreateArticle={this.handleCreateArticle}
                         />
                     )} />
+
+                    //!! WORK ON THIS> STILL NOT FIXED
+                    <Route exact path='/articles/:id/edit' render={(props) => {
+                        const articleId = this.props.match.params.id;
+                        const article = this.state.articles.find(article => article.id === parseInt(articleId));
+                        return <updateArticle
+                            {...props}
+                            article={article}
+                            putArticle={this.putArticle}
+                        />
+                    }}
+                    />
 
 
                 </div>
