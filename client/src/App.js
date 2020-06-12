@@ -51,6 +51,9 @@ class App extends Component {
         //!  FIGURE OUT HOW TO SHOW USERS INSIDE THE MAP FUNCTION USING USER ID
         return (
             <div className="App">
+                <Header
+                    currentUser={this.state.currentUser}
+                />
                 <Route to="/" exact>
                     <Main
                         key={this.state.data}

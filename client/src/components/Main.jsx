@@ -11,7 +11,7 @@ export default class Main extends Component {
         return (
             <div>
                 <div>
-                    <Header />
+
                     <Route path="/" exact>
                         <Home
                             key={this.props.data}
