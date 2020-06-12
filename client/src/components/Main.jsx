@@ -104,7 +104,7 @@ export default class Main extends Component {
                         )} />
                     </div>
 
-                    <Route exact path='/articles/new' render={(props) => (
+                    <Route exact path='/new' render={(props) => (
                         <CreateArticle
                             {...props}
                             handleCreateArticle={this.handleCreateArticle}
