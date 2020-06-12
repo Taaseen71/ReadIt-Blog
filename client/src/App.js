@@ -40,17 +40,26 @@ class App extends Component {
 
 
 
+    /* -------------------------------------------------------------------------- */
+    /*                                   signUp                                   */
+    /* -------------------------------------------------------------------------- */
+
+    handleSignUpSubmit = async (registerData) => {
+        const currentUser = await registerUser(registerData);
+        this.setState({ currentUser });
+    }
+
+
+
+    /* -------------------------------------------------------------------------- */
+    /*                                    Login                                   */
+    /* -------------------------------------------------------------------------- */
 
 
 
     handleLogInSubmit = async (loginData) => {
         const currentUser = await loginUser(loginData);
         this.setState({ currentUser })
-    }
-
-    handleSignUpSubmit = async (registerData) => {
-        const currentUser = await registerUser(registerData);
-        this.setState({ currentUser });
     }
 
     handleLogOut = () => {
@@ -60,6 +69,11 @@ class App extends Component {
         localStorage.clear();
         removeToken();
     }
+
+
+    /* -------------------------------------------------------------------------- */
+    /*                                   verify                                   */
+    /* -------------------------------------------------------------------------- */
 
     handleVerify = async () => {
         const currentUser = await verifyUser();

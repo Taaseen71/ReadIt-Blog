@@ -19,16 +19,35 @@ export default class Main extends Component {
         this.getArticles();
     }
 
+
+
+    /* -------------------------------------------------------------------------- */
+    /*                                  articles                                  */
+    /* -------------------------------------------------------------------------- */
+
     getArticles = async () => {
         const articles = await getAllArticles();
         this.setState({ articles })
+        // // this.setState({ articles: articles })
+        // this.setState(async prevState => (
+        //     prevState.articles = articles
+        // ))
     }
 
 
     handleCreateArticle = async (userParams) => {
         const newArticle = await createArticle(userParams);
-        // this.setState.articles.push(newArticle);
+        this.setState(async prevState => ({
+            articles: [...prevState.articles, newArticle]
+        }))
+        //! USING PREVSTATE SOMEHOW BREAKS CODE. NEED TO FIND A OUT WHERE THE ISSUE IS. 
+        //! Only Await fixes it.but it still doesnt update real time.
     }
+
+    /* -------------------------------------------------------------------------- */
+    /*                                articles end                                */
+    /* -------------------------------------------------------------------------- */
+
 
     render() {
         return (

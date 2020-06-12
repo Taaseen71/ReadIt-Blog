@@ -21,13 +21,15 @@ export default class CreateArticle extends Component {
         return (
             <form
                 onSubmit={(e) => {
-                    e.preventDefault();
+                    // e.preventDefault();
                     this.props.handleCreateArticle(this.state);
                     this.props.history.push('/');
                     this.setState({
                         title: "",
                         description: ""
                     })
+                    window.location.reload(false);
+                    //? need to refresh page because page not updating upon creation
                 }}
             >
                 <label htmlFor="title"> Title:<br />
