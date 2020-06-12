@@ -83,6 +83,7 @@ class App extends Component {
                         key={this.state.data}
                         data={this.state.data}
                         users={this.state.user}
+                        currentUser={this.state.currentUser}
                         handleLogInSubmit={this.handleLogInSubmit}
                         handleSignUpSubmit={this.handleSignUpSubmit}
 
