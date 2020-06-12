@@ -11,14 +11,14 @@ export default function Nav() {
                     <Link to="/"> Browse All Articles </Link>
                 </li>
                 <li>
-                    <Link to="/LogIn"> Log In </Link>
+                    <Link to="/user/LogIn"> Log In/Register </Link>
                 </li>
-                <li>
-                    <Link to="/SignUp"> Sign Up</Link>
-                </li>
-                <li>
-                    <Link to="/SignUp"> </Link>
-                </li>
+                {/* <li>
+                    <Link to="/user/SignUp"> Sign Up</Link>
+                </li> */}
+                {/* <li>
+                    <Link to="/user/SignUp"> </Link>
+                </li> */}
 
             </ul>
 

@@ -5,17 +5,30 @@ import Header from "./components/Header";
 import LogIn from "./components/LogIn";
 import SignUp from "./components/SignUp";
 import Home from "./components/Home";
+import { loginUser, registerUser } from "./services/auth"
 
 import './App.css';
+import Main from './components/Main';
+
 
 
 class App extends Component {
     state = {
         data: [],
-        users: []
+        users: [],
+        currentUser: null,
     }
 
 
+    handleLogInSubmit = async (loginData) => {
+        const currentUser = await loginUser(loginData);
+        this.setState({ currentUser })
+    }
+
+    handleSignUpSubmit = async (registerData) => {
+        const currentUser = await registerUser(registerData);
+        this.setState({ currentUser });
+    }
 
     async componentDidMount() {
         console.log("componentdidmount");
@@ -38,24 +51,13 @@ class App extends Component {
         //!  FIGURE OUT HOW TO SHOW USERS INSIDE THE MAP FUNCTION USING USER ID
         return (
             <div className="App">
-                <Header />
-                <Route path="/" exact>
-                    <Home
+                <Route to="/" exact>
+                    <Main
                         key={this.state.data}
                         data={this.state.data}
                         users={this.state.user}
-                    />
-                </Route>
-                <Route exact path="/LogIn">
-                    <LogIn
-                        key={this.state.user}
-                        user={this.state.user}
-                    />
-                </Route>
-                <Route exact path="/SignUp">
-                    <SignUp
-                        key={this.state.user}
-                        user={this.state.user}
+                        handleLogInSubmit={this.handleLogInSubmit}
+                        handleSignUpSubmit={this.handleSignUpSubmit}
                     />
                 </Route>
 
