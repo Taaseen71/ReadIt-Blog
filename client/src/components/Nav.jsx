@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom"
 
 export default function Nav(props) {
-    let CurrentUsername
-
+    let CurrentUsername;
     if (props.currentUser) {
         CurrentUsername = props.currentUser.username.split('')
         CurrentUsername[0] = CurrentUsername[0].toUpperCase();
@@ -18,8 +17,14 @@ export default function Nav(props) {
                     <Link to="/"> Browse All Articles </Link>
                 </li>
                 <li>
-                    {props.currentUser ?
-                        <> Hello {CurrentUsername} </>
+                    {props.currentUser
+                        ?
+                        <>
+                            <h6>
+                                Hello {CurrentUsername}
+                            </h6>
+                            <button onClick={props.handleLogOut}> LogOut </button>
+                        </>
                         :
                         <>
                             <Link to="/user/LogIn"> Log In/Register </Link>

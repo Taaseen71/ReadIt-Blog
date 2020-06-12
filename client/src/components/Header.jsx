@@ -3,7 +3,7 @@ import Nav from './Nav'
 import { Route } from 'react-router-dom'
 
 
-class Header extends Component {
+export default class Header extends Component {
     state = {}
     render() {
         return (
@@ -13,7 +13,9 @@ class Header extends Component {
                 </div>
                 <>
                     <Route to="/" >
-                        <Nav currentUser={this.props.currentUser}
+                        <Nav
+                            currentUser={this.props.currentUser}
+                            handleLogOut={this.props.handleLogOut}
                         />
                     </Route>
                 </>
@@ -22,4 +24,3 @@ class Header extends Component {
     }
 }
 
-export default Header;

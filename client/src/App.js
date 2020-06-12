@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import LogIn from "./components/LogIn";
 import SignUp from "./components/SignUp";
 import Home from "./components/Home";
-import { loginUser, registerUser } from "./services/auth"
+import { loginUser, registerUser, removeToken } from "./services/auth"
 
 import './App.css';
 import Main from './components/Main';
@@ -28,6 +28,14 @@ class App extends Component {
     handleSignUpSubmit = async (registerData) => {
         const currentUser = await registerUser(registerData);
         this.setState({ currentUser });
+    }
+
+    handleLogOut = () => {
+        this.setState({
+            currentUser: null
+        })
+        localStorage.clear();
+        removeToken();
     }
 
     async componentDidMount() {
@@ -53,6 +61,7 @@ class App extends Component {
             <div className="App">
                 <Header
                     currentUser={this.state.currentUser}
+                    handleLogOut={this.handleLogOut}
                 />
                 <Route to="/" exact>
                     <Main
@@ -61,6 +70,7 @@ class App extends Component {
                         users={this.state.user}
                         handleLogInSubmit={this.handleLogInSubmit}
                         handleSignUpSubmit={this.handleSignUpSubmit}
+
                     />
                 </Route>
 
