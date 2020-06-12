@@ -28,6 +28,7 @@ export default class Main extends Component {
                     </Route>
                     <Route exact path="/user/SignUp">
                         <SignUp
+                            handleSignUpSubmit={this.props.handleSignUpSubmit}
                             key={this.props.user}
                             user={this.props.user}
                         />

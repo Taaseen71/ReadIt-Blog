@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import LogIn from "./components/LogIn";
 import SignUp from "./components/SignUp";
 import Home from "./components/Home";
-import { loginUser } from "./services/auth"
+import { loginUser, registerUser } from "./services/auth"
 
 import './App.css';
 import Main from './components/Main';
@@ -23,6 +23,11 @@ class App extends Component {
     handleLogInSubmit = async (loginData) => {
         const currentUser = await loginUser(loginData);
         this.setState({ currentUser })
+    }
+
+    handleSignUpSubmit = async (registerData) => {
+        const currentUser = await registerUser(registerData);
+        this.setState({ currentUser });
     }
 
     async componentDidMount() {
@@ -52,6 +57,7 @@ class App extends Component {
                         data={this.state.data}
                         users={this.state.user}
                         handleLogInSubmit={this.handleLogInSubmit}
+                        handleSignUpSubmit={this.handleSignUpSubmit}
                     />
                 </Route>
 
