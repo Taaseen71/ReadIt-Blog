@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom"
+import "./Articles.css"
 
 export default function Articles(props) {
 

@@ -10,30 +10,32 @@ export default function Nav(props) {
     }
 
     return (
-        <div>
-            This is the Nav
+        <div className="navWrappingDiv">
+
             <ul>
                 <nav>
-                    <NavLink to="/"> Browse All Articles </NavLink>
-                    {props.currentUser && (<NavLink to="/articles"> My Articles </NavLink>)}
+                    <NavLink className="navLinks" to="/"> Browse All Articles </NavLink>
+                    {props.currentUser && (<NavLink className="navLinks" to="/articles"> My Articles </NavLink>)}
                     {/*   
                         //? if user is present, show my Articles, or else, don't show
                     */}
                 </nav>
+                <div className="userOrLogin">
+                    {props.currentUser
+                        ?
+                        <div className="usernameAndLogout">
+                            <h6 className="loggedInUser">
+                                Hello {CurrentUsername}
+                                {/* {props.currentUser.username} */}
+                            </h6>
+                            <button className="logOutButton" onClick={props.handleLogOut}> LogOut </button>
+                        </div>
+                        :
 
-                {props.currentUser
-                    ?
-                    <>
-                        <h6>
-                            Hello {CurrentUsername}
-                            {/* {props.currentUser.username} */}
-                        </h6>
-                        <button onClick={props.handleLogOut}> LogOut </button>
-                    </>
-                    :
-                    <Link to="/user/LogIn"> Log In/Register </Link>
-                }
+                        <NavLink className="navLinks" to="/user/LogIn"> Log In/Register </NavLink>
 
+                    }
+                </div>
             </ul>
 
 

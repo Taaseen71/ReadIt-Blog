@@ -1,0 +1,79 @@
+.header {
+    background-color: orange;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/*                                   !!NavBAR                                   */
+
+/* -------------------------------------------------------------------------- */
+
+.navWrappingDiv {
+    display: flex;
+    font-size: larger;
+}
+
+ul {
+    width: 100%;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+    clear: left;
+    padding: 0
+}
+
+.usernameAndLogout {
+    display: flex;
+}
+
+.userOrLogin {
+    display: inline-flex;
+    float: right;
+    text-decoration: none;
+    display: inline-flex;
+}
+
+.loggedInUser {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    font-size: 20px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.logOutButton {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 0 20px;
+    border-radius: 200px;
+}
+
+.navLinks {
+    display: inline-flex;
+    text-decoration: none;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+    font-size: larger;
+    padding: 0 20px;
+    flex-direction: row;
+}
+
+.logInRegister {
+    text-decoration: none;
+    color: black
+}
+
+/* -------------------------------------------------------------------------- */
+
+/*                                        !EndNavBar                                 */
+
+/* -------------------------------------------------------------------------- */
