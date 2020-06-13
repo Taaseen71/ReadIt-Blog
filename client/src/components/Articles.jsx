@@ -84,6 +84,7 @@ export default class Articles extends Component {
                                                                 Delete
                                                 </button>
                                                         </>
+
                                                     )
                                                 }
                                             </>
