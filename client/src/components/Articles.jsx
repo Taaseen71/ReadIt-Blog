@@ -100,7 +100,9 @@ export default class Articles extends Component {
                                                 )
                                                 )}
                                                 <textarea onResize={(e) => { }} className="commentTextArea" type="text" placeholder="add a new comment" cols="60" rows="1" onChange={this.handleChange} />
-                                                <button onSubmit={this.handleOnSubmit}>submit</button>
+                                                <div className="commentButtonWrapper">
+                                                    <button className="addCommentSubmit" onSubmit={this.handleOnSubmit}>submit</button>
+                                                </div>
                                             </div>
                                         </div>
                                         {/* <hr /> */}

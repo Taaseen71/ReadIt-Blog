@@ -99,6 +99,25 @@ hr {
     font-weight: 700;
 }
 
+.commentButtonWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.addCommentSubmit {
+    width: 50%;
+    margin: 10px;
+    border: none;
+    padding: 1px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    background-color: crimson;
+    color: white;
+    border-radius: 5px;
+}
+
 textarea, input {
     border-radius: 5px;
     background: rgb(203, 192, 192);
