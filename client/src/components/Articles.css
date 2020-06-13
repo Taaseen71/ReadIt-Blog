@@ -1,3 +1,149 @@
 body {
-    background-color: chocolate;
+    background-color: teal;
+}
+
+hr {
+    border: 2px solid rgba(199, 98, 25, 0.9);
+    background-color: rgba(199, 98, 25, 0.9);
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.WholeArticlesWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.secondArticlesWrapper {
+    /* background-color: rgba(199, 98, 25, 0.8); */
+    /* border-radius: 15px; */
+    width: 700px;
+}
+
+.articlesHeader {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgba(199, 98, 25, 0.9);
+    padding-bottom: 15px;
+    padding-top: 1px;
+}
+
+.eachArticle {
+    border-radius: 10px;
+    background-color: rgba(199, 98, 25, 0.9);
+    /* margin: 20px auto; */
+    padding: 20px 0px;
+}
+
+.CreateArticleButton {
+    width: 50%;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    background-color: crimson;
+    color: white;
+    border-radius: 8px;
+}
+
+.titleH3 {
+    font-size: 15px;
+    margin-bottom: 0px;
+}
+
+.descriptionDiv {
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+}
+
+.descriptionBox {
+    display: flex;
+    width: 600px;
+}
+
+.articleButtons {
+    background-color: #008CBA;
+    /* Blue */
+    border: none;
+    color: white;
+    padding: 1px 10px;
+    margin: 0 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15.5px;
+    border-radius: 4px;
+}
+
+.commentsWrapper {
+    display: flex;
+    justify-content: center;
+    ;
+}
+
+.commentsDiv {
+    background: rgba(203, 195, 195, 0.1);
+    padding: 5px 15px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    text-align: left;
+}
+
+.commentsName {
+    font-weight: 700;
+}
+
+.commentButtonWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.addCommentSubmit {
+    width: 50%;
+    margin: 10px;
+    border: none;
+    padding: 1px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    background-color: crimson;
+    color: white;
+    border-radius: 5px;
+}
+
+textarea, input {
+    border-radius: 5px;
+    background: rgb(203, 192, 192);
+    resize: none;
+}
+
+.commentTextArea {
+    overflow: auto;
+}
+
+/* !CreateArticle Labels */
+
+.labelText {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.createArticleFormWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.createArticleForm {
+    background-color: rgba(199, 98, 25, 0.9);
+    width: 700px;
+    padding-bottom: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }

@@ -1,5 +1,6 @@
 .header {
-    background-color: orange;
+    /* background-color: rgba(1, 82, 82, 0.5);
+    border-radius: 20px; */
 }
 
 /* -------------------------------------------------------------------------- */
@@ -8,7 +9,17 @@
 
 /* -------------------------------------------------------------------------- */
 
+.navEncompassingWrap {
+    display: flex;
+    justify-content: center;
+}
+
 .navWrappingDiv {
+    background-color: rgba(199, 98, 25, 0.9);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-bottom: 10px;
+    width: 700px;
     display: flex;
     font-size: larger;
 }
