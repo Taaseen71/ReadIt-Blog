@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import TextareaAutosize from "react-autosize-textarea";
+import "./Articles.css";
 
 
 export default class CreateArticle extends Component {
@@ -32,8 +33,8 @@ export default class CreateArticle extends Component {
                     //? need to refresh page because page not updating upon
                 }}
             >
-                <label htmlFor="title"> Title:<br />
-                    <input
+                <label className="labelText" htmlFor="title"> Title:<br />
+                    <TextareaAutosize onResize={(e) => { }}
                         id="title"
                         type="text"
                         name="title"
@@ -41,16 +42,16 @@ export default class CreateArticle extends Component {
                         onChange={this.handleChange} />
                 </label>
                 <div>
-                    <label htmlFor="description"> Description:<br />
-                        <textarea
-                            id="description" cols="30" rows="10"
+                    <label className="labelText" htmlFor="description"> Description:<br />
+                        <TextareaAutosize onResize={(e) => { }}
+                            id="description" cols="60" rows="10"
                             name="description"
                             value={this.state.description}
-                            onChange={this.handleChange}>
-                        </textarea>
+                            onChange={this.handleChange}
+                        />
                     </label>
                 </div>
-                <button>Submit</button>
+                <button className="CreateArticleButton">Submit</button>
             </form>
         )
     }

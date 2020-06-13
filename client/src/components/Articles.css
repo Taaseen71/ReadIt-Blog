@@ -1,3 +1,101 @@
-body {
-    background-color: chocolate;
+/* body {
+} */
+
+hr {
+    border: 1px solid rgba(199, 98, 25, 0.9);
+    margin: 20px;
+}
+
+.WholeArticlesWrapper {
+    display: flex;
+    background-color: black;
+    justify-content: center;
+}
+
+.secondArticlesWrapper {
+    background-color: rgba(199, 98, 25, 0.9);
+    border-radius: 15px;
+    width: 700px;
+}
+
+.CreateArticleButton {
+    width: 50%;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    background-color: crimson;
+    color: white;
+    border-radius: 8px;
+}
+
+.titleH3 {
+    font-size: 15px;
+    margin-bottom: 0px;
+    ;
+}
+
+.descriptionDiv {
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+}
+
+.descriptionBox {
+    display: flex;
+    width: 600px;
+}
+
+.articleButtons {
+    background-color: #008CBA;
+    /* Blue */
+    border: none;
+    color: white;
+    padding: 1px 10px;
+    margin: 0 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15.5px;
+    border-radius: 4px;
+}
+
+.commentsWrapper {
+    display: flex;
+    justify-content: center;
+    ;
+}
+
+.commentsDiv {
+    background: rgba(203, 195, 195, 0.1);
+    padding: 5px 15px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    text-align: left;
+}
+
+.commentsName {
+    font-weight: 700;
+}
+
+textarea, input {
+    border-radius: 5px;
+    background: rgb(203, 192, 192);
+    resize: none;
+}
+
+.commentTextArea {
+    overflow: auto;
+}
+
+/* !CreateArticle Labels */
+
+.labelText {
+    font-weight: 600;
+    font-size: 15px;
 }
