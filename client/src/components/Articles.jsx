@@ -9,14 +9,11 @@ export default function Articles(props) {
     const currentUser = props.currentUser
     const handleDestoryArticle = props.handleDestoryArticle
 
-    const changetoCaps = () => {
-
-        let CurrentUsername;
-        if (props.currentUser) {
-            CurrentUsername = props.currentUser.username.split('')
-            CurrentUsername[0] = CurrentUsername[0].toUpperCase();
-            CurrentUsername = CurrentUsername.join('')
-        }
+    const changetoCaps = (CurrentUsername) => {
+        CurrentUsername = CurrentUsername.split('')
+        CurrentUsername[0] = CurrentUsername[0].toUpperCase();
+        CurrentUsername = CurrentUsername.join('')
+        return CurrentUsername;
     }
 
 
@@ -36,8 +33,8 @@ export default function Articles(props) {
                             <React.Fragment key={article.id}>
                                 <>
                                     <h3 className="titleH3">
-                                        {article.title}, By <span>
-                                            {article.user.username}
+                                        {article.title}, by <span>
+                                            {changetoCaps(article.user.username)}
                                         </span>
                                     </h3>
                                     <div className="descriptionDiv">
@@ -68,7 +65,7 @@ export default function Articles(props) {
                                     <div className="commentsDiv">
                                         {article.comments.map(comment => (
                                             <div >
-                                                <p key={comment.user_id}><span className="commentsName">  {comment.user.username}: </span>{comment.my_comment}</p>
+                                                <p key={comment.user_id}><span className="commentsName">  {changetoCaps(comment.user.username)}: </span>{comment.my_comment}</p>
                                                 {/* <p>{x[comment.user_id]}</p> */}
                                             </div>
                                         )
