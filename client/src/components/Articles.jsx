@@ -86,8 +86,6 @@ export default class Articles extends Component {
                                                         </>
                                                     )
                                                 }
-
-
                                             </>
                                         </>
                                         <div className="commentsWrapper">
@@ -99,13 +97,17 @@ export default class Articles extends Component {
                                                     </div>
                                                 )
                                                 )}
-                                                <textarea onResize={(e) => { }} className="commentTextArea" type="text" placeholder="add a new comment" cols="60" rows="1" onChange={this.handleChange} />
-                                                <div className="commentButtonWrapper">
-                                                    <button className="addCommentSubmit" onSubmit={this.handleOnSubmit}>submit</button>
-                                                </div>
+                                                {
+                                                    currentUser &&
+                                                    <>
+                                                        <textarea onResize={(e) => { }} className="commentTextArea" type="text" placeholder="add a new comment" cols="60" rows="1" onChange={this.handleChange} />
+                                                        <div className="commentButtonWrapper">
+                                                            <button className="addCommentSubmit" onSubmit={this.handleOnSubmit}>submit</button>
+                                                        </div>
+                                                    </>
+                                                }
                                             </div>
                                         </div>
-                                        {/* <hr /> */}
                                     </div>
                                     <hr />
                                 </>
