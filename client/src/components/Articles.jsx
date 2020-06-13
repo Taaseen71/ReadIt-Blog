@@ -7,23 +7,21 @@ import TextareaAutosize from "react-autosize-textarea";
 export default class Articles extends Component {
 
     state = {
-        newComment: "",
-        articleId: ""
+        my_comment: ""
     }
 
     handleChange = (e) => {
         e.preventDefault()
         const { value } = e.target
         this.setState({
-            newComment: value,
-            articleId: e.article.id
+            my_comment: value
         })
     }
 
 
-    handleOnSubmit = (e) => {
-        e.preventDefault();
-        this.props.handleCreateComment(this.state.articleId, this.state.newComment)
+    handleOnSubmit = (articleId) => {
+        this.props.handleCreateComment(articleId, this.state)
+        // this.props.history.push('/');
     }
 
 
@@ -84,6 +82,7 @@ export default class Articles extends Component {
                                                                 Delete
                                                 </button>
                                                         </>
+
                                                     )
                                                 }
                                             </>
@@ -102,7 +101,7 @@ export default class Articles extends Component {
                                                     <>
                                                         <textarea onResize={(e) => { }} className="commentTextArea" type="text" placeholder="add a new comment" cols="60" rows="1" onChange={this.handleChange} />
                                                         <div className="commentButtonWrapper">
-                                                            <button className="addCommentSubmit" onSubmit={this.handleOnSubmit}>submit</button>
+                                                            <button className="addCommentSubmit" onClick={() => this.handleOnSubmit(article.id)}>submit</button>
                                                         </div>
                                                     </>
                                                 }
