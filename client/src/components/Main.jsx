@@ -72,7 +72,7 @@ export default class Main extends Component {
     handleCreateComment = async (articleId, userInput) => {
         const newComment = await createComment(articleId, userInput);
 
-        this.state(prevState => ({
+        this.setState(prevState => ({
             articles: prevState.articles.map((art) => {
                 if (art.id === newComment.article_id) {
                     art.comments.push(newComment);
@@ -130,10 +130,10 @@ export default class Main extends Component {
                     <div >
                         <Route exact path='/articles' render={(props) => (
                             <Articles
-                                {...props}
-                                articles={this.state.articles.filter((art) => {
-                                    return art.user_id === this.props.currentUser.id
-                                })}
+                                {...props} //? Trying to redirect logout to home
+                                articles={this.state.articles.filter((art) => (
+                                    art.user_id === this.props.currentUser.id
+                                ))}
                                 currentUser={this.props.currentUser}
                                 handleDestoryArticle={this.handleDestoryArticle}
                                 handleCreateComment={this.handleCreateComment}

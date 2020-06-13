@@ -29,7 +29,9 @@ export default function Nav(props) {
                                     Hello {CurrentUsername}
                                     {/* {props.currentUser.username} */}
                                 </h6>
-                                <button className="logOutButton" onClick={props.handleLogOut}> LogOut </button>
+                                <button className="logOutButton"
+                                    onClick={props.handleLogOut}
+                                > LogOut </button>
                             </div>
                             :
 

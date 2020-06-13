@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Route, Switch, Link } from 'react-router-dom';
+import { withRouter } from 'react-router';
 import Header from "./components/Header";
 import LogIn from "./components/LogIn";
 import SignUp from "./components/SignUp";
@@ -68,6 +69,7 @@ class App extends Component {
         })
         localStorage.clear();
         removeToken();
+        this.props.history.push("/")
     }
 
 
@@ -88,9 +90,13 @@ class App extends Component {
         //!  FIGURE OUT HOW TO SHOW USERS INSIDE THE MAP FUNCTION USING USER ID
         return (
             <div className="App">
-                <Header
-                    currentUser={this.state.currentUser}
-                    handleLogOut={this.handleLogOut}
+                <Route path="/" render={(props) => (
+                    <Header
+                        {...props}
+                        currentUser={this.state.currentUser}
+                        handleLogOut={this.handleLogOut}
+                    />
+                )}
                 />
                 <Route to="/" exact>
                     <Main
@@ -104,9 +110,9 @@ class App extends Component {
                     />
                 </Route>
 
-            </div>
+            </div >
         )
     }
 }
 
-export default App;
+export default withRouter(App);

@@ -13,12 +13,14 @@ export default class Header extends Component {
                         <h1>ReadIt, Where Expression is key</h1>
                     </div>
                     <>
-                        <Route to="/" >
+                        <Route to="/" render={(props) => (
                             <Nav
+                                {...props}
                                 currentUser={this.props.currentUser}
                                 handleLogOut={this.props.handleLogOut}
                             />
-                        </Route>
+                        )
+                        } />
                     </>
                 </div>
             </React.Fragment>
