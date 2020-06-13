@@ -1,21 +1,38 @@
-/* body {
-} */
+body {
+    background-color: teal;
+}
 
 hr {
-    border: 1px solid rgba(199, 98, 25, 0.9);
-    margin: 20px;
+    border: 2px solid rgba(199, 98, 25, 0.9);
+    background-color: rgba(199, 98, 25, 0.9);
+    border-radius: 5px;
+    margin: 10px;
 }
 
 .WholeArticlesWrapper {
     display: flex;
-    background-color: black;
     justify-content: center;
 }
 
 .secondArticlesWrapper {
-    background-color: rgba(199, 98, 25, 0.9);
-    border-radius: 15px;
+    /* background-color: rgba(199, 98, 25, 0.8); */
+    /* border-radius: 15px; */
     width: 700px;
+}
+
+.articlesHeader {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgba(199, 98, 25, 0.9);
+    padding-bottom: 15px;
+    padding-top: 1px;
+}
+
+.eachArticle {
+    border-radius: 10px;
+    background-color: rgba(199, 98, 25, 0.9);
+    /* margin: 20px auto; */
+    padding: 20px 0px;
 }
 
 .CreateArticleButton {
@@ -34,7 +51,6 @@ hr {
 .titleH3 {
     font-size: 15px;
     margin-bottom: 0px;
-    ;
 }
 
 .descriptionDiv {
@@ -98,4 +114,17 @@ textarea, input {
 .labelText {
     font-weight: 600;
     font-size: 15px;
+}
+
+.createArticleFormWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.createArticleForm {
+    background-color: rgba(199, 98, 25, 0.9);
+    width: 700px;
+    padding-bottom: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }

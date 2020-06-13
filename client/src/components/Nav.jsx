@@ -10,35 +10,41 @@ export default function Nav(props) {
     }
 
     return (
-        <div className="navWrappingDiv">
+        <div className="navEncompassingWrap">
+            <div className="navWrappingDiv">
 
-            <ul>
-                <nav>
-                    <NavLink className="navLinks" to="/"> Browse All Articles </NavLink>
-                    {props.currentUser && (<NavLink className="navLinks" to="/articles"> My Articles </NavLink>)}
-                    {/*   
+                <ul>
+                    <nav>
+                        <NavLink className="navLinks" to="/"> Browse All Articles </NavLink>
+                        {props.currentUser && (<NavLink className="navLinks" to="/articles"> My Articles </NavLink>)}
+                        {/*   
                         //? if user is present, show my Articles, or else, don't show
                     */}
-                </nav>
-                <div className="userOrLogin">
-                    {props.currentUser
-                        ?
-                        <div className="usernameAndLogout">
-                            <h6 className="loggedInUser">
-                                Hello {CurrentUsername}
-                                {/* {props.currentUser.username} */}
-                            </h6>
-                            <button className="logOutButton" onClick={props.handleLogOut}> LogOut </button>
-                        </div>
-                        :
+                    </nav>
+                    <div className="userOrLogin">
+                        {props.currentUser
+                            ?
+                            <div className="usernameAndLogout">
+                                <h6 className="loggedInUser">
+                                    Hello {CurrentUsername}
+                                    {/* {props.currentUser.username} */}
+                                </h6>
+                                <button className="logOutButton" onClick={props.handleLogOut}> LogOut </button>
+                            </div>
+                            :
 
-                        <NavLink className="navLinks" to="/user/LogIn"> Log In/Register </NavLink>
+                            <NavLink className="navLinks" to="/user/LogIn">
+                                <button className="logOutButton" >
+                                    Log In/Register
+                            </button>
+                            </NavLink>
 
-                    }
-                </div>
-            </ul>
+                        }
+                    </div>
+                </ul>
 
 
+            </div>
         </div>
     )
 }

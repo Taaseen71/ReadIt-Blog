@@ -8,6 +8,7 @@ import { getAllArticles, createArticle, destroyArticle, updateArticle } from '..
 import Articles from './Articles';
 import Article from './Article';
 import CreateArticle from './CreateArticle';
+import { createComment } from '../services/comment';
 
 
 export default class Main extends Component {
@@ -36,8 +37,8 @@ export default class Main extends Component {
     }
 
 
-    handleCreateArticle = async (userParams) => {
-        const newArticle = await createArticle(userParams);
+    handleCreateArticle = async (userInput) => {
+        const newArticle = await createArticle(userInput);
 
         this.setState(prevState => ({
             articles: [...prevState.articles, newArticle]
@@ -64,6 +65,27 @@ export default class Main extends Component {
     /*                                articles end                                */
     /* -------------------------------------------------------------------------- */
 
+    /* -------------------------------------------------------------------------- */
+    /*                               Comments Start                               */
+    /* -------------------------------------------------------------------------- */
+
+    handleCreateComment = async (articleId, userInput) => {
+        const newComment = await createComment(articleId, userInput);
+
+        this.state(prevState => ({
+            articles: prevState.articles.map((art) => {
+                if (art.id === newComment.article_id) {
+                    art.comments.push(newComment);
+                }
+                return art;
+            })
+        }))
+    }
+
+
+    /* -------------------------------------------------------------------------- */
+    /*                                Comments End                                */
+    /* -------------------------------------------------------------------------- */
 
     render() {
         return (
@@ -101,6 +123,20 @@ export default class Main extends Component {
                                 articles={this.state.articles}
                                 currentUser={this.props.currentUser}
                                 handleDestoryArticle={this.handleDestoryArticle}
+                                handleCreateComment={this.handleCreateComment}
+                            />
+                        )} />
+                    </div>
+                    <div >
+                        <Route exact path='/articles' render={(props) => (
+                            <Articles
+                                {...props}
+                                articles={this.state.articles.filter((art) => {
+                                    return art.user_id === this.props.currentUser.id
+                                })}
+                                currentUser={this.props.currentUser}
+                                handleDestoryArticle={this.handleDestoryArticle}
+                                handleCreateComment={this.handleCreateComment}
                             />
                         )} />
                     </div>

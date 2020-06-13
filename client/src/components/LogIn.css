@@ -1,0 +1,52 @@
+.LogInAllEncompassingWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.LogInAllEncompassingWrapper2 {
+    background-color: rgba(199, 98, 25, 0.9);
+    width: 700px;
+    padding-bottom: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.logInBox {
+    display: flex;
+    justify-content: center;
+}
+
+.logInBox2 {
+    background-color: rgba(199, 98, 25, 0.4);
+    width: 300px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.logInBox3 {
+    text-align: end;
+}
+
+.logInLabel {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.LogIninputboxes {
+    margin: 10px;
+    font-size: 14px;
+}
+
+.LogInButton {
+    width: 50%;
+    margin: 10px;
+    border: none;
+    padding: 1px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    background-color: crimson;
+    color: white;
+    border-radius: 5px;
+}
