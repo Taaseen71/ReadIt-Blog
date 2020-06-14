@@ -45,7 +45,7 @@ export default class Articles extends Component {
             <div className="WholeArticlesWrapper">
                 <div className="secondArticlesWrapper">
                     <div className="articlesHeader">
-                        <h2>Articles</h2>
+
                         {currentUser &&
                             <Link to="/new">
                                 <button className="CreateArticleButton" >Create New Article</button>
