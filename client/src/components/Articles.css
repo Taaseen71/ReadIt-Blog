@@ -1,15 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&family=Raleway:wght@600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&family=Raleway:wght@600&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 /* font-family: 'Lato', sans-serif; */
+
+/* font-family: 'Open Sans', sans-serif; */
 
 /* font-family: 'Raleway', sans-serif; */
 
+/* font-family: 'Roboto', sans-serif; */
+
 body {
-    background-color: teal;
+    background-color: rgb(219, 224, 229);
 }
 
 hr {
-    border: 2px solid rgba(199, 98, 25, 0.9);
-    background-color: rgba(199, 98, 25, 0.9);
+    border: 2px solid rgba(255, 255, 255);
+    background-color: rgba(255, 255, 255);
     border-radius: 5px;
     margin: 10px;
 }
@@ -22,20 +29,25 @@ hr {
 .secondArticlesWrapper {
     /* background-color: rgba(199, 98, 25, 0.8); */
     /* border-radius: 15px; */
-    width: 700px;
+    /* width: 700px; */
 }
 
 .articlesHeader {
+    width: 700px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    background-color: rgba(199, 98, 25, 0.9);
+    background-color: rgba(255, 255, 255);
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
     padding-bottom: 15px;
     padding-top: 1px;
 }
 
 .eachArticle {
     border-radius: 10px;
-    background-color: rgba(199, 98, 25, 0.9);
+    background-color: rgba(255, 255, 255);
+    border: 1px solid black;
     /* margin: 20px auto; */
     padding: 20px 0px;
 }
@@ -67,7 +79,7 @@ hr {
 .titleH3 {
     font-size: 18px;
     margin-bottom: 0px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .descriptionDiv {
@@ -77,7 +89,7 @@ hr {
 }
 
 .descriptionBox {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     width: 600px;
     font-size: 15px;
@@ -124,7 +136,7 @@ hr {
     flex-direction: column;
     width: 300px;
     text-align: left;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .commentsName {
@@ -173,6 +185,8 @@ textarea, input {
     background: rgb(203, 192, 192);
     resize: none;
     outline: none;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 1px rgb(37, 36, 36);
 }
 
 .commentTextArea {
@@ -192,7 +206,10 @@ textarea, input {
 }
 
 .createArticleForm {
-    background-color: rgba(199, 98, 25, 0.9);
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: rgba(255, 255, 255);
     width: 700px;
     padding-bottom: 20px;
     border-bottom-left-radius: 20px;
@@ -213,6 +230,9 @@ textarea, input {
         justify-content: center;
     }
     .secondArticlesWrapper {
+        width: 300px;
+    }
+    .articlesHeader {
         width: 300px;
     }
     .CreateArticleButton {

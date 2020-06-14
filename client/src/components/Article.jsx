@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import TextareaAutosize from "react-autosize-textarea";
+import "./Articles.css";
 
 export default class Article extends Component {
     state = {
@@ -42,8 +44,8 @@ export default class Article extends Component {
         // const { title } = this.state;
         // const { description } = this.state;
         return (
-            <div>
-                <form onSubmit={(e) => {
+            <div className="createArticleFormWrapper">
+                <form className="createArticleForm" onSubmit={(e) => {
                     e.preventDefault();
                     this.props.handleEditArticle(this.props.article.id, this.state);
                     this.props.history.push('/')
@@ -55,9 +57,9 @@ export default class Article extends Component {
                 }}>
                     <hr />
                     <h3>Update Article</h3>
-                    <label htmlFor="title"> Title: <br />
+                    <label className="labelText" htmlFor="title"> Title: <br />
                         {/* <input id="id" type="text" value={title} onChange={this.handleChange} /> */}
-                        <textarea
+                        <TextareaAutosize onResize={(e) => { }}
                             id="title"
                             name="title"
                             value={this.state.title}
@@ -67,10 +69,11 @@ export default class Article extends Component {
                         />
                     </label>
                     <br />
-                    <label htmlFor="description"> Description: <br />
-                        <textarea
+                    <label className="labelText" htmlFor="description"> Description: <br />
+                        <TextareaAutosize onResize={(e) => { }}
                             id="description"
                             name="description"
+                            className="createArticleTextArea"
                             value={this.state.description}
                             onChange={this.handleChange}
                             cols="60"
@@ -78,7 +81,7 @@ export default class Article extends Component {
                         />
                     </label>
                     <br />
-                    <button>Submit</button>
+                    <button className="CreateArticleButton" >Submit</button>
                 </form>
             </div>
         )
