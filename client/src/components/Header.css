@@ -1,8 +1,3 @@
-.header {
-    /* background-color: rgba(1, 82, 82, 0.5);
-    border-radius: 20px; */
-}
-
 /* -------------------------------------------------------------------------- */
 
 /*                                   !!NavBAR                                   */
@@ -57,6 +52,7 @@ ul {
     background-color: #4CAF50;
     /* Green */
     border: none;
+    outline: none;
     color: white;
     padding: 15px 20px;
     text-align: center;
@@ -65,6 +61,13 @@ ul {
     font-size: 10px;
     margin: 0 20px;
     border-radius: 200px;
+    box-shadow: 0 3px rgb(37, 36, 36)
+}
+
+.logOutButton:active {
+    background-color: #3e8e41;
+    box-shadow: 0 1px rgb(37, 36, 36);
+    transform: translateY(2px);
 }
 
 .navLinks {
@@ -76,6 +79,11 @@ ul {
     font-size: larger;
     padding: 0 20px;
     flex-direction: row;
+    font-weight: 700;
+}
+
+.navLinks:hover {
+    color: rgb(129, 2, 34);
 }
 
 .logInRegister {

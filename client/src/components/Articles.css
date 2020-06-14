@@ -38,6 +38,7 @@ hr {
 .CreateArticleButton {
     width: 50%;
     border: none;
+    outline: none;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -46,6 +47,17 @@ hr {
     background-color: crimson;
     color: white;
     border-radius: 8px;
+    box-shadow: 0 4px rgb(37, 36, 36);
+}
+
+.CreateArticleButton:hover {
+    background-color: rgb(250, 32, 75);
+}
+
+.CreateArticleButton:active {
+    background-color: rgb(167, 14, 44);
+    box-shadow: 0 2px rgb(37, 36, 36);
+    transform: translateY(2px);
 }
 
 .titleH3 {
@@ -68,6 +80,7 @@ hr {
     background-color: #008CBA;
     /* Blue */
     border: none;
+    outline: none;
     color: white;
     padding: 1px 10px;
     margin: 0 5px;
@@ -77,6 +90,17 @@ hr {
     display: inline-block;
     font-size: 15.5px;
     border-radius: 4px;
+    box-shadow: 0 3px rgb(37, 36, 36);
+}
+
+.articleButtons:hover {
+    background-color: rgb(8, 170, 224);
+}
+
+.articleButtons:active {
+    background-color: rgb(4, 108, 143);
+    box-shadow: 0 1px rgb(37, 36, 36);
+    transform: translateY(1px);
 }
 
 .commentsWrapper {
@@ -108,6 +132,7 @@ hr {
     width: 50%;
     margin: 10px;
     border: none;
+    outline: none;
     padding: 1px;
     text-align: center;
     text-decoration: none;
@@ -116,6 +141,17 @@ hr {
     background-color: crimson;
     color: white;
     border-radius: 5px;
+    box-shadow: 0 3px rgb(37, 36, 36);
+}
+
+.addCommentSubmit:hover {
+    background-color: rgb(250, 32, 75);
+}
+
+.addCommentSubmit:active {
+    background-color: rgb(172, 16, 47);
+    box-shadow: 0 1px rgb(37, 36, 36);
+    transform: translateY(1px);
 }
 
 textarea, input {
