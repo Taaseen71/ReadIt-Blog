@@ -62,3 +62,13 @@
     background-color: rgb(167, 16, 46);
     transform: translateY(1px);
 }
+
+@media only screen and (max-width: 700px) {
+    .LogInAllEncompassingWrapper {
+        display: flex;
+        justify-content: center;
+    }
+    .LogInAllEncompassingWrapper2 {
+        width: 300px;
+    }
+}

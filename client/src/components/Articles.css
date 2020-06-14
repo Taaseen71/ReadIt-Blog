@@ -41,13 +41,12 @@ hr {
 }
 
 .CreateArticleButton {
-    width: 50%;
+    width: 38%;
     border: none;
     outline: none;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
     background-color: crimson;
     color: white;
@@ -129,7 +128,8 @@ hr {
 }
 
 .commentsName {
-    font-weight: 700;
+    font-size: 13px;
+    padding-right: 8px;
 }
 
 .commentButtonWrapper {
@@ -163,10 +163,16 @@ hr {
     transform: translateY(1px);
 }
 
+.pComments {
+    padding-left: 10px;
+    /* margin: 40px; */
+}
+
 textarea, input {
     border-radius: 5px;
     background: rgb(203, 192, 192);
     resize: none;
+    outline: none;
 }
 
 .commentTextArea {
@@ -191,4 +197,55 @@ textarea, input {
     padding-bottom: 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+}
+
+.createArticleTextArea {
+    columns: 60;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        background-color: lightblue;
+    }
+    .WholeArticlesWrapper {
+        display: flex;
+        justify-content: center;
+    }
+    .secondArticlesWrapper {
+        width: 300px;
+    }
+    .CreateArticleButton {
+        padding: 1px 0;
+    }
+    .eachArticle {
+        padding: 5px 20px;
+    }
+    .commentsWrapper {
+        display: flex;
+        justify-content: center;
+    }
+    .commentsDiv {
+        width: 250px;
+    }
+    .commentsName {
+        padding-right: 5px;
+    }
+    .pComments {
+        padding: 0 5px;
+    }
+    textarea {
+        outline: none;
+    }
+    .createArticleFormWrapper {
+        display: flex;
+        justify-content: center;
+    }
+    .createArticleForm {
+        width: 300px;
+    }
+    .createArticleTextArea {
+        columns: 60;
+        margin-bottom: 10px;
+    }
 }

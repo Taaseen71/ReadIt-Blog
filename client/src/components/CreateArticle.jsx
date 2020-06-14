@@ -48,7 +48,8 @@ export default class CreateArticle extends Component {
                     <div>
                         <label className="labelText" htmlFor="description"> Description:<br />
                             <TextareaAutosize onResize={(e) => { }}
-                                id="description" cols="60" rows="10"
+                                id="description" rows="20" cols="30"
+                                className="createArticleTextArea"
                                 name="description"
                                 value={this.state.description}
                                 onChange={this.handleChange}

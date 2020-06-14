@@ -107,3 +107,38 @@ ul {
 /*                                        !EndNavBar                                 */
 
 /* -------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 700px) {
+    .navEncompassingWrap {
+        display: flex;
+        justify-content: center;
+    }
+    .navWrappingDiv {
+        width: 300px;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 20px auto;
+        clear: both;
+    }
+    nav {
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .navLinks {
+        justify-content: center;
+    }
+    .usernameAndLogout {
+        display: flex;
+        flex-direction: column;
+    }
+    .logOutButton {
+        margin: 5px auto;
+        font-size: 12px;
+        padding: 3px 20px;
+    }
+}

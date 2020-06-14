@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import "./Articles.css"
 import TextareaAutosize from "react-autosize-textarea";
 
-// export default function Articles(props) {
+
 export default class Articles extends Component {
 
     state = {
@@ -93,8 +93,13 @@ export default class Articles extends Component {
                                         <div className="commentsWrapper">
                                             <div className="commentsDiv">
                                                 {article.comments.map(comment => (
+
                                                     <div >
-                                                        <p key={comment.user_id}><span className="commentsName">  {changetoCaps(comment.user.username)}: </span>{comment.my_comment}</p>
+                                                        <p className="pComments" key={comment.user_id}>
+                                                            <span className="commentsName">
+                                                                {changetoCaps(comment.user.username)}:
+                                                                    </span>{comment.my_comment}
+                                                        </p>
 
                                                     </div>
                                                 )
