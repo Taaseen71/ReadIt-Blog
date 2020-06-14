@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 .LogInAllEncompassingWrapper {
     display: flex;
     justify-content: center;
 }
 
 .LogInAllEncompassingWrapper2 {
-    background-color: rgba(199, 98, 25, 0.9);
+    background-color: rgba(255, 255, 255);
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
     width: 700px;
     padding-bottom: 20px;
     border-bottom-left-radius: 20px;
@@ -17,7 +21,7 @@
 }
 
 .logInBox2 {
-    background-color: rgba(199, 98, 25, 0.4);
+    background-color: rgba(71, 22, 145, 0.1);
     width: 300px;
     border-radius: 10px;
     padding: 10px;
@@ -70,5 +74,12 @@
     }
     .LogInAllEncompassingWrapper2 {
         width: 300px;
+    }
+    .logInBox3 {
+        text-align: center;
+    }
+    .logInLabel {
+        display: flex;
+        flex-direction: column;
     }
 }

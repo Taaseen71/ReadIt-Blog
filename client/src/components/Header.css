@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 /* font-family: 'Lato', sans-serif; */
+
+/* font-family: 'Open Sans', sans-serif; */
 
 /* font-family: 'Raleway', sans-serif; */
 
@@ -15,9 +19,12 @@
 }
 
 .navWrappingDiv {
-    background-color: rgba(199, 98, 25, 0.9);
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    background-color: rgba(255, 255, 255);
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     padding-bottom: 10px;
     width: 700px;
     display: flex;
@@ -85,7 +92,7 @@ ul {
     padding: 0 20px;
     flex-direction: row;
     font-weight: 700;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .navLinks:hover {
@@ -98,7 +105,7 @@ ul {
 }
 
 .heroTitle {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 40px;
 }
 
