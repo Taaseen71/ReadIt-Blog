@@ -20,8 +20,11 @@ export default class Articles extends Component {
 
 
     handleOnSubmit = (articleId) => {
+
         this.props.handleCreateComment(articleId, this.state)
-        // this.props.history.push('/');
+        this.setState({
+            my_comment: ''
+        });
     }
 
 
@@ -77,7 +80,7 @@ export default class Articles extends Component {
                                                             <button className="articleButtons"
                                                                 onClick={() => {
                                                                     handleDestoryArticle(article.id);
-                                                                    // window.location.reload(false);
+
                                                                 }}>
                                                                 Delete
                                                 </button>
@@ -99,9 +102,14 @@ export default class Articles extends Component {
                                                 {
                                                     currentUser &&
                                                     <>
-                                                        <textarea onResize={(e) => { }} className="commentTextArea" type="text" placeholder="add a new comment" cols="60" rows="1" onChange={this.handleChange} />
+                                                        <TextareaAutosize onResize={(e) => { }} className="commentTextArea" type="text"
+                                                            placeholder="add a new comment" cols="60" rows="1"
+                                                            value={this.state.my_comment}
+                                                            onChange={this.handleChange} />
                                                         <div className="commentButtonWrapper">
-                                                            <button className="addCommentSubmit" onClick={() => this.handleOnSubmit(article.id)}>submit</button>
+                                                            <button className="addCommentSubmit" onClick={() => {
+                                                                this.handleOnSubmit(article.id);
+                                                            }}>submit</button>
                                                         </div>
                                                     </>
                                                 }
