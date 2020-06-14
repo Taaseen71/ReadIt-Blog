@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&family=Raleway:wght@600&display=swap');
+/* font-family: 'Lato', sans-serif; */
+
+/* font-family: 'Raleway', sans-serif; */
+
 body {
     background-color: teal;
 }
@@ -36,21 +41,33 @@ hr {
 }
 
 .CreateArticleButton {
-    width: 50%;
+    width: 38%;
     border: none;
+    outline: none;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
     background-color: crimson;
     color: white;
     border-radius: 8px;
+    box-shadow: 0 4px rgb(37, 36, 36);
+}
+
+.CreateArticleButton:hover {
+    background-color: rgb(250, 32, 75);
+}
+
+.CreateArticleButton:active {
+    background-color: rgb(167, 14, 44);
+    box-shadow: 0 2px rgb(37, 36, 36);
+    transform: translateY(2px);
 }
 
 .titleH3 {
-    font-size: 15px;
+    font-size: 18px;
     margin-bottom: 0px;
+    font-family: 'Lato', sans-serif;
 }
 
 .descriptionDiv {
@@ -60,14 +77,18 @@ hr {
 }
 
 .descriptionBox {
+    font-family: 'Raleway', sans-serif;
     display: flex;
     width: 600px;
+    font-size: 15px;
+    font-weight: 400;
 }
 
 .articleButtons {
     background-color: #008CBA;
     /* Blue */
     border: none;
+    outline: none;
     color: white;
     padding: 1px 10px;
     margin: 0 5px;
@@ -77,12 +98,22 @@ hr {
     display: inline-block;
     font-size: 15.5px;
     border-radius: 4px;
+    box-shadow: 0 3px rgb(37, 36, 36);
+}
+
+.articleButtons:hover {
+    background-color: rgb(8, 170, 224);
+}
+
+.articleButtons:active {
+    background-color: rgb(4, 108, 143);
+    box-shadow: 0 1px rgb(37, 36, 36);
+    transform: translateY(1px);
 }
 
 .commentsWrapper {
     display: flex;
     justify-content: center;
-    ;
 }
 
 .commentsDiv {
@@ -93,10 +124,12 @@ hr {
     flex-direction: column;
     width: 300px;
     text-align: left;
+    font-family: 'Raleway', sans-serif;
 }
 
 .commentsName {
-    font-weight: 700;
+    font-size: 13px;
+    padding-right: 8px;
 }
 
 .commentButtonWrapper {
@@ -108,6 +141,7 @@ hr {
     width: 50%;
     margin: 10px;
     border: none;
+    outline: none;
     padding: 1px;
     text-align: center;
     text-decoration: none;
@@ -116,12 +150,29 @@ hr {
     background-color: crimson;
     color: white;
     border-radius: 5px;
+    box-shadow: 0 3px rgb(37, 36, 36);
+}
+
+.addCommentSubmit:hover {
+    background-color: rgb(250, 32, 75);
+}
+
+.addCommentSubmit:active {
+    background-color: rgb(172, 16, 47);
+    box-shadow: 0 1px rgb(37, 36, 36);
+    transform: translateY(1px);
+}
+
+.pComments {
+    padding-left: 10px;
+    /* margin: 40px; */
 }
 
 textarea, input {
     border-radius: 5px;
     background: rgb(203, 192, 192);
     resize: none;
+    outline: none;
 }
 
 .commentTextArea {
@@ -146,4 +197,55 @@ textarea, input {
     padding-bottom: 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+}
+
+.createArticleTextArea {
+    columns: 60;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        background-color: lightblue;
+    }
+    .WholeArticlesWrapper {
+        display: flex;
+        justify-content: center;
+    }
+    .secondArticlesWrapper {
+        width: 300px;
+    }
+    .CreateArticleButton {
+        padding: 1px 0;
+    }
+    .eachArticle {
+        padding: 5px 20px;
+    }
+    .commentsWrapper {
+        display: flex;
+        justify-content: center;
+    }
+    .commentsDiv {
+        width: 250px;
+    }
+    .commentsName {
+        padding-right: 5px;
+    }
+    .pComments {
+        padding: 0 5px;
+    }
+    textarea {
+        outline: none;
+    }
+    .createArticleFormWrapper {
+        display: flex;
+        justify-content: center;
+    }
+    .createArticleForm {
+        width: 300px;
+    }
+    .createArticleTextArea {
+        columns: 60;
+        margin-bottom: 10px;
+    }
 }

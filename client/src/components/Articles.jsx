@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import "./Articles.css"
 import TextareaAutosize from "react-autosize-textarea";
 
-// export default function Articles(props) {
+
 export default class Articles extends Component {
 
     state = {
@@ -20,8 +20,11 @@ export default class Articles extends Component {
 
 
     handleOnSubmit = (articleId) => {
+
         this.props.handleCreateComment(articleId, this.state)
-        // this.props.history.push('/');
+        this.setState({
+            my_comment: ''
+        });
     }
 
 
@@ -45,7 +48,7 @@ export default class Articles extends Component {
             <div className="WholeArticlesWrapper">
                 <div className="secondArticlesWrapper">
                     <div className="articlesHeader">
-                        <h2>Articles</h2>
+
                         {currentUser &&
                             <Link to="/new">
                                 <button className="CreateArticleButton" >Create New Article</button>
@@ -77,7 +80,7 @@ export default class Articles extends Component {
                                                             <button className="articleButtons"
                                                                 onClick={() => {
                                                                     handleDestoryArticle(article.id);
-                                                                    // window.location.reload(false);
+
                                                                 }}>
                                                                 Delete
                                                 </button>
@@ -90,8 +93,13 @@ export default class Articles extends Component {
                                         <div className="commentsWrapper">
                                             <div className="commentsDiv">
                                                 {article.comments.map(comment => (
+
                                                     <div >
-                                                        <p key={comment.user_id}><span className="commentsName">  {changetoCaps(comment.user.username)}: </span>{comment.my_comment}</p>
+                                                        <p className="pComments" key={comment.user_id}>
+                                                            <span className="commentsName">
+                                                                {changetoCaps(comment.user.username)}:
+                                                                    </span>{comment.my_comment}
+                                                        </p>
 
                                                     </div>
                                                 )
@@ -99,9 +107,14 @@ export default class Articles extends Component {
                                                 {
                                                     currentUser &&
                                                     <>
-                                                        <textarea onResize={(e) => { }} className="commentTextArea" type="text" placeholder="add a new comment" cols="60" rows="1" onChange={this.handleChange} />
+                                                        <TextareaAutosize onResize={(e) => { }} className="commentTextArea" type="text"
+                                                            placeholder="add a new comment" cols="60" rows="1"
+                                                            value={this.state.my_comment}
+                                                            onChange={this.handleChange} />
                                                         <div className="commentButtonWrapper">
-                                                            <button className="addCommentSubmit" onClick={() => this.handleOnSubmit(article.id)}>submit</button>
+                                                            <button className="addCommentSubmit" onClick={() => {
+                                                                this.handleOnSubmit(article.id);
+                                                            }}>submit</button>
                                                         </div>
                                                     </>
                                                 }

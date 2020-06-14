@@ -10,7 +10,7 @@ export default class Header extends Component {
             <React.Fragment>
                 <div className="header">
                     <div>
-                        <h1>ReadIt, Where Expression is key</h1>
+                        <h1 className='heroTitle'>ReadIt, Where Expression is key</h1>
                     </div>
                     <>
                         <Route to="/" render={(props) => (
