@@ -109,7 +109,7 @@ export default class Articles extends Component {
                                                     <>
                                                         <TextareaAutosize onResize={(e) => { }} className="commentTextArea" type="text"
                                                             placeholder="add a new comment" cols="60" rows="1"
-                                                            value={this.state.my_comment}
+                                                            // value={this.state.my_comment}
                                                             onChange={this.handleChange} />
                                                         <div className="commentButtonWrapper">
                                                             <button className="addCommentSubmit" onClick={() => {
