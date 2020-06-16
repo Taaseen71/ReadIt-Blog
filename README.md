@@ -27,10 +27,8 @@ ReadIt-Blog
 - https://read-it-saad1.netlify.app/
 
 <br />
-<img src="./images/HomePage.png" width= "300px" > 
-<img src="./images/LogIn.png" width= "300px" > 
-<img src="./images/SignUp.png" width= "300px" >
-<img src="./images/CreateArticle.png" width= "300px" >
+<img src="./images/HomePage.png" width= "300px" > <img src="./images/LogIn.png" width= "300px" > 
+<img src="./images/SignUp.png" width= "300px" > <img src="./images/CreateArticle.png" width= "300px" >
 <img src="./images/LoggedInHomePage.png" width= "300px" >
 <br />
 
