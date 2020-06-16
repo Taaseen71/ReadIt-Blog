@@ -68,7 +68,7 @@ https://imgur.com/nkYvf6C
 
 #### Component Breakdown
 
-> Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
+> This section to goes into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
 
 |  Component   |    Type    | state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
@@ -79,7 +79,7 @@ https://imgur.com/nkYvf6C
 
 #### Component Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
+> This section estimates the time necessary to build out each of the components you've described above.
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
