@@ -29,7 +29,7 @@ ReadIt-Blog
 <br />
 <img src="./images/HomePage.png" width= "250px" > <img src="./images/LogIn.png" width= "250px" >  <br />
 <img src="./images/SignUp.png" width= "250px" > <img src="./images/CreateArticle.png" width= "250px" > <br />
-<img src="./images/LoggedInHomePage.png" width= "300px" > <br />
+<img src="./images/LoggedInHomePage.png" width= "250px" > <br />
 <br />
 
 
