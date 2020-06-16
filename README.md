@@ -108,9 +108,9 @@ https://imgur.com/eDcLPdT
 A full list of all libraries, frameworks, etc.
 
 # Post-MVP
-Make a working Search Feature
-Make CSS more polished
-add many to many comment section
-Add a react feature for each article and comments
-add update and delete features for comments section
+- Make a working Search Feature
+- Make CSS more polished
+- add many to many comment section
+- Add a react feature for each article and comments
+- add update and delete features for comments section
 
