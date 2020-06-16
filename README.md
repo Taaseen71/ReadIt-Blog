@@ -22,6 +22,15 @@ ReadIt-Blog
 - [Code Issues & Resolutions](#code-issues--resolutions)
 
 
+# [EDITED] Deployed Website
+https://read-it-saad1.surge.sh/
+https://read-it-saad1.netlify.app/
+
+<br />
+<img src="./images/WireFrame1.png" width= "300px" > 
+<img src="./images/Wireframe2.png" width= "300px" > <img src="./images/Wireframe3.png" width= "300px" >
+<br />
+
 
 
 # Overview
